@@ -18,8 +18,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gifs/favorites" element={<Favorites />} />
-          <Route path="/gifs/:id" element={<Details />} />
+          <Route path="/jobs/favorites" element={<Favorites />} />
+          <Route path="/jobs/:id" element={<Details />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

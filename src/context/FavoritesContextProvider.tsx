@@ -1,27 +1,56 @@
-import { ReactNode, useState } from "react";
-import Gif from "../models/Gif";
+import { ReactNode, useContext, useEffect, useState } from "react";
+import Favorite from "../models/Favorite";
+import {
+  addFavorite,
+  deleteFavorite,
+  getFavorites,
+} from "../services/FavoriteService";
 import FavoritesContext from "./FavoritesContext";
+import AuthContext from "./AuthContext";
 
 interface Props {
   children: ReactNode;
 }
 
 const FavoritesContextProvider = ({ children }: Props) => {
-  const [favorites, setFavorites] = useState<Gif[]>([]);
-  const addFavorite = (gif: Gif): void => {
-    setFavorites((prev) => [...prev, gif]);
+  const [favorites, setFavorites] = useState<Favorite[]>([]);
+  const { user } = useContext(AuthContext);
+
+  const loadFavorites = async () => {
+    if (user) {
+      const favorites: Favorite[] = await getFavorites(user.uid!);
+      setFavorites(favorites);
+    } else {
+      setFavorites([]);
+    }
   };
-  const removeFavorite = (id: string): void => {
-    setFavorites((prev) => {
-      const index: number = prev.findIndex((item) => item.id === id);
-      return [...prev.slice(0, index), ...prev.slice(index + 1)];
-    });
+
+  const addFavoriteHandler = async (newFavorite: Favorite): Promise<void> => {
+    if (user) {
+      await addFavorite(newFavorite, user.uid!);
+      loadFavorites();
+    }
   };
-  const isFav = (id: string): boolean => favorites.some((gif) => gif.id === id);
+
+  const deleteFavoriteHandler = async (id: string): Promise<void> => {
+    if (user) {
+      await deleteFavorite(user.uid!, id);
+      loadFavorites();
+    }
+  };
+
+  const isFav = (id: string): boolean =>
+    favorites.some((favorite) => favorite.job.id === id);
+
+  useEffect(() => {
+    (async () => {
+      loadFavorites();
+    })();
+  }, [user]);
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, addFavorite, removeFavorite, isFav }}
+      value={{ favorites, addFavoriteHandler, deleteFavoriteHandler, isFav }}
     >
       {children}
     </FavoritesContext.Provider>

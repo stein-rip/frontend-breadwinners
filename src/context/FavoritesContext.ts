@@ -1,17 +1,16 @@
 import { createContext } from "react";
-import Gif from "../models/Gif";
+import Favorite from "../models/Favorite";
 
 interface FavoritesContextModel {
-  favorites: Gif[];
-  addFavorite: (gif: Gif) => void;
-  removeFavorite: (id: string) => void;
+  favorites: Favorite[];
+  addFavoriteHandler: (favorite: Favorite) => void;
+  deleteFavoriteHandler: (id: string) => void;
   isFav: (id: string) => boolean;
 }
-
 const defaultValues: FavoritesContextModel = {
   favorites: [],
-  addFavorite: () => {},
-  removeFavorite: () => {},
+  addFavoriteHandler: () => {},
+  deleteFavoriteHandler: () => {},
   isFav: () => false,
 };
 
