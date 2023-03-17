@@ -12,7 +12,7 @@ const CardList = ({ jobArrayProp }: Props) => {
       <h2>Results</h2>
       <ul>
         {jobArrayProp.map((item) => (
-          <Card jobProp={item} key={item.id} />
+          <Card jobProp={item} key={item.job_id} />
         ))}
       </ul>
     </div>

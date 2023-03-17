@@ -31,6 +31,7 @@ export default interface Job {
   job_employment_type: string;
   job_title: string;
   job_apply_link: string;
+  job_description: string;
   job_is_remote: boolean;
   job_posted_at_timestamp: number;
   job_posted_at_datetime_utc: string;
