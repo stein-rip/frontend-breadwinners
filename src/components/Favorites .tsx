@@ -16,7 +16,7 @@ const Favorites = () => {
           ))}
         </ul>
       ) : (
-        <p>Sign in to view your favorites</p>
+        <p>Your Bread Bank</p>
       )}
     </div>
   );

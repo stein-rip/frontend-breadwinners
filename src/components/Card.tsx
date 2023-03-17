@@ -17,18 +17,20 @@ const Card = ({ jobProp }: Props) => {
 
   return (
     <li className="Card">
-      <h3>{jobProp.title}</h3>
-      {jobProp.images.original.url ? (
-        <Link to={`/jobs/${jobProp.id}`}>
-          <img src={jobProp.images.original.url} alt={jobProp.title} />
+      <h3>{jobProp.employer_name}</h3>
+      {jobProp.employer_logo ? (
+        <Link to={`/jobs/${jobProp.job_id}`}>
+          <img src={jobProp.employer_logo} alt={jobProp.job_title} />
         </Link>
       ) : (
         <img src={fourOhFour} alt="not found" />
       )}
+      <h4>{jobProp.job_title}</h4>
+      <h4>{jobProp.job_description}</h4>
 
       {user &&
-        (isFav(jobProp.id) ? (
-          <button onClick={() => deleteFavoriteHandler(jobProp.id)}>
+        (isFav(jobProp.job_id) ? (
+          <button onClick={() => deleteFavoriteHandler(jobProp.job_id)}>
             Delete Favorite
           </button>
         ) : (

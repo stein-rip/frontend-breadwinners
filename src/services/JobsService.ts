@@ -1,29 +1,66 @@
 import axios from "axios";
 import MultipleJobResponse from "../models/MultipleJobResponse";
 import SingleJobResponse from "../models/SingleJobResponse";
+import Job from "../models/Job";
 
-const baseURL: string = "https://api.giphy.com/v1/jobs";
-const key: string = process.env.REACT_APP_GIPHY_KEY || "";
+const baseURL: string = "https://jsearch.p.rapidapi.com/search";
+const key: string = process.env.REACT_APP_API_URL || "";
 
-export const getTrendingJobs = async (): Promise<MultipleJobResponse> => {
-  return (await axios.get(baseURL + "/trending", { params: { api_key: key } }))
-    .data;
-};
+// export const getJobs = async (): Promise<MultipleJobResponse> => {
+//   return (await axios.get(baseURL, { params: { X-RapidAPI-Key: key } }))
+//     .data;
+// };
 
 export const getJobsBySearchTerm = async (
-  searchTerm: string
+  // date_posted: enum
+  date_posted: any | null,
+  remote_jobs_only: boolean | null,
+  employment_types: string | null,
+  job_requirements: string | null,
+  radius: number | null,
+  categories: string | null,
+  job_titles: string | null,
+  company_types: string | null,
+  employers: string | null,
+  location: string | null
 ): Promise<MultipleJobResponse> => {
+  const params = {
+    ...(date_posted ? { date_posted } : {}),
+    ...(remote_jobs_only ? { remote_jobs_only } : {}),
+    ...(employment_types ? { employment_types } : {}),
+    ...(job_requirements ? { job_requirements } : {}),
+    ...(radius ? { radius } : {}),
+    ...(categories ? { categories } : {}),
+    ...(job_titles ? { job_titles } : {}),
+    ...(company_types ? { company_types } : {}),
+    ...(employers ? { employers } : {}),
+    ...(location ? { location } : {}),
+  };
+
+  // /search-filters'
+  // (location ? {string} : {}),
+
   return (
     await axios.get(baseURL + "/search", {
-      params: { api_key: key, q: searchTerm },
+      params: { params },
+      headers: {
+        "X-RapidAPI-Key": key,
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      },
     })
   ).data;
 };
 
-export const getJobById = async (id: string): Promise<SingleJobResponse> => {
+export const getJobById = async (
+  job_id: string
+): Promise<SingleJobResponse> => {
   return (
-    await axios.get(baseURL + "/" + encodeURIComponent(id), {
-      params: { api_key: key },
+    await axios.get(baseURL + "/" + encodeURIComponent(job_id), {
+      params: { query: job_id },
+      headers: {
+        "X-RapidAPI-Key": key,
+        "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+      },
     })
   ).data;
 };
