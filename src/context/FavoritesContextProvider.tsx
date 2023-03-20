@@ -1,4 +1,4 @@
-import { ReactNode, useContext, useEffect, useState } from "react";
+import { ReactNode, useCallback, useContext, useEffect, useState } from "react";
 import Favorite from "../models/Favorite";
 import {
   addFavorite,
@@ -16,14 +16,14 @@ const FavoritesContextProvider = ({ children }: Props) => {
   const [favorites, setFavorites] = useState<Favorite[]>([]);
   const { user } = useContext(AuthContext);
 
-  const loadFavorites = async () => {
+  const loadFavorites = useCallback(async () => {
     if (user) {
       const favorites: Favorite[] = await getFavorites(user.uid!);
       setFavorites(favorites);
     } else {
       setFavorites([]);
     }
-  };
+  }, [user]);
 
   const addFavoriteHandler = async (newFavorite: Favorite): Promise<void> => {
     if (user) {
@@ -32,21 +32,21 @@ const FavoritesContextProvider = ({ children }: Props) => {
     }
   };
 
-  const deleteFavoriteHandler = async (id: string): Promise<void> => {
+  const deleteFavoriteHandler = async (job_id: string): Promise<void> => {
     if (user) {
-      await deleteFavorite(user.uid!, id);
+      await deleteFavorite(user.uid!, job_id);
       loadFavorites();
     }
   };
 
-  const isFav = (id: string): boolean =>
-    favorites.some((favorite) => favorite.job.id === id);
+  const isFav = (job_id: string): boolean =>
+    favorites.some((favorite) => favorite._id === job_id);
 
   useEffect(() => {
     (async () => {
       loadFavorites();
     })();
-  }, [user]);
+  }, [user, loadFavorites]);
 
   return (
     <FavoritesContext.Provider
