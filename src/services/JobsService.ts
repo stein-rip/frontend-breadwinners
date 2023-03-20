@@ -1,10 +1,9 @@
 import axios from "axios";
 import MultipleJobResponse from "../models/MultipleJobResponse";
 import SingleJobResponse from "../models/SingleJobResponse";
-import Job from "../models/Job";
 
-const baseURL: string = "https://jsearch.p.rapidapi.com/search";
-const key: string = process.env.REACT_APP_API_URL || "";
+const baseURL: string = "https://jsearch.p.rapidapi.com";
+const key: string = process.env.REACT_APP_JSEARCH_KEY || "";
 
 // export const getJobs = async (): Promise<MultipleJobResponse> => {
 //   return (await axios.get(baseURL, { params: { X-RapidAPI-Key: key } }))
@@ -13,6 +12,7 @@ const key: string = process.env.REACT_APP_API_URL || "";
 
 export const getJobsBySearchTerm = async (
   // date_posted: enum
+  query: string,
   date_posted: any | null,
   remote_jobs_only: boolean | null,
   employment_types: string | null,
@@ -25,6 +25,7 @@ export const getJobsBySearchTerm = async (
   location: string | null
 ): Promise<MultipleJobResponse> => {
   const params = {
+    query,
     ...(date_posted ? { date_posted } : {}),
     ...(remote_jobs_only ? { remote_jobs_only } : {}),
     ...(employment_types ? { employment_types } : {}),
@@ -42,7 +43,7 @@ export const getJobsBySearchTerm = async (
 
   return (
     await axios.get(baseURL + "/search", {
-      params: { params },
+      params,
       headers: {
         "X-RapidAPI-Key": key,
         "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
@@ -55,7 +56,7 @@ export const getJobById = async (
   job_id: string
 ): Promise<SingleJobResponse> => {
   return (
-    await axios.get(baseURL + "/" + encodeURIComponent(job_id), {
+    await axios.get(baseURL + "/job-details" + encodeURIComponent(job_id), {
       params: { query: job_id },
       headers: {
         "X-RapidAPI-Key": key,
