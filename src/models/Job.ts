@@ -40,7 +40,6 @@ export default interface Job {
   job_country: null | string;
   job_latitude: number;
   job_longitude: number;
-  // job_benefits?: JobBenefits | null;
   job_offer_expiration_datetime_utc: string;
   job_offer_expiration_timestamp: number;
   job_required_experience: JobRequiredExperience;
