@@ -1,0 +1,26 @@
+.Card img {
+  height: 20px;
+}
+
+.Card .Toast {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: contain;
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.Card h3,
+h4 {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 30px;
+  font-size: small;
+}
+
+.Card .ToastContainer {
+  width: 50vw;
+  align-items: center;
+}

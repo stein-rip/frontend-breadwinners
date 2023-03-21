@@ -3,6 +3,7 @@ import "./Header.css";
 import { signInWithGoogle, signOut } from "../firebaseConfig";
 import AuthContext from "../context/AuthContext";
 import { useContext } from "react";
+import ToastMascot from "../assets/ToastMascot.png";
 
 const Header = () => {
   const { user } = useContext(AuthContext);
@@ -11,6 +12,7 @@ const Header = () => {
     <header className="Header">
       <div className="Title">
         <Link to="/">
+          <img src={ToastMascot} alt="ToastMascot" />
           <h1>BREADWINNERS</h1>
         </Link>
         <nav className="Nav">
