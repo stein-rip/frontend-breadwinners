@@ -5,6 +5,7 @@ export default interface Profile {
   photo_url: string | null;
   email: string | null;
   query: string;
+  date_posted: string | null;
   experience_level: string;
   job_is_remote: boolean;
   job_employment_type: string;

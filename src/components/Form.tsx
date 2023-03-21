@@ -1,64 +1,51 @@
-import { FormEvent, useContext, useState } from "react";
+import { FormEvent, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import { addProfile } from "../services/ProfileService";
 import "./Form.css";
 
 const Form = () => {
-  const { user } = useContext(AuthContext);
-  const [query, setQuery] = useState("");
-  const [date_posted, setDate_posted] = useState("");
-  const [remote_jobs_only, setRemote_Jobs_Only] = useState(false);
-  const [employment_types, setEmployment_Types] = useState("");
-  const [job_requirements, setJob_Requirements] = useState("");
-  const [radius, setRadius] = useState("");
-  const [categories, setCategories] = useState("");
-  const [job_titles, setJob_Titles] = useState("");
-  const [company_types, setCompany_Types] = useState("");
-  const [employers, setEmployers] = useState("");
-  const [location, setLocation] = useState("");
+  const { user, profile, addProfileHandler } = useContext(AuthContext);
+  console.log(profile);
+  const [query, setQuery] = useState(profile?.query || "");
+  const [date_posted, setDate_posted] = useState(profile?.date_posted || "all");
+  const [remote_jobs_only, setRemote_Jobs_Only] = useState(
+    profile?.job_is_remote || false
+  );
+  const [employment_types, setEmployment_Types] = useState(
+    profile?.job_employment_type || ""
+  );
+  const [job_requirements, setJob_Requirements] = useState(
+    profile?.experience_level || ""
+  );
+
+  useEffect(() => {
+    if (profile) {
+      setQuery(profile.query);
+      setDate_posted(profile.date_posted || "");
+      setRemote_Jobs_Only(profile.job_is_remote);
+      setEmployment_Types(profile.job_employment_type || "");
+      setJob_Requirements(profile.experience_level || "");
+    }
+  }, [profile]);
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e: FormEvent): Promise<void> => {
     e.preventDefault();
-    const params = {
-      query,
-      ...(date_posted ? { date_posted } : {}),
-      ...(remote_jobs_only ? { remote_jobs_only } : {}),
-      ...(employment_types ? { employment_types } : {}),
-      ...(job_requirements ? { job_requirements } : {}),
-      ...(radius ? { radius } : {}),
-      ...(categories ? { categories } : {}),
-      ...(job_titles ? { job_titles } : {}),
-      ...(company_types ? { company_types } : {}),
-      ...(employers ? { employers } : {}),
-      ...(location ? { location } : {}),
-    };
     if (user) {
-      await addProfile({
+      await addProfileHandler({
         google_id: user.uid!,
         display_name: user.displayName,
         photo_url: user.photoURL,
         email: user.email,
         query,
+        date_posted: date_posted,
         experience_level: job_requirements,
         job_is_remote: remote_jobs_only,
         job_employment_type: employment_types,
       });
     }
-
     navigate(`/`);
-    setQuery("");
-    setDate_posted("");
-    setRemote_Jobs_Only(false);
-    setEmployment_Types("");
-    setJob_Requirements("");
-    setRadius("");
-    setCategories("");
-    setJob_Titles("");
-    setCompany_Types("");
-    setEmployers("");
-    setLocation("");
   };
 
   return (
@@ -70,18 +57,25 @@ const Form = () => {
           type="text"
           name="query"
           id="query"
+          placeholder="Python Developer in Texas, USA"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           required
         />
         <label htmlFor="datePosted">Date Posted</label>
-        <input
-          type="text"
+
+        <select
           name="datePosted"
           id="datePosted"
           value={date_posted}
           onChange={(e) => setDate_posted(e.target.value)}
-        />
+        >
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="3days">Past 72 Hours</option>
+          <option value="week">Past Week</option>
+          <option value="month">Past Month</option>
+        </select>
         <label htmlFor="remoteJobsOnly">Remote</label>
         <input
           type="checkbox"
@@ -90,38 +84,42 @@ const Form = () => {
           checked={remote_jobs_only}
           onChange={(e) => setRemote_Jobs_Only(e.target.checked)}
         />
-        <label htmlFor="employmentTypes">Intern</label>
+        <label htmlFor="intern">Intern</label>
         <div>
           <input
             type="checkbox"
             name="intern"
             id="intern"
-            value={""}
+            value="INTERN"
+            checked={employment_types === "INTERN"}
             onChange={(e) => setEmployment_Types(e.target.value)}
           />
-          <label htmlFor="employmentTypes">Full-Time</label>
+          <label htmlFor="full-time">Full-Time</label>
           <input
             type="checkbox"
             id="full-time"
             name="full-time"
-            value={""}
+            value="FULLTIME"
+            checked={employment_types === "FULLTIME"}
             onChange={(e) => setEmployment_Types(e.target.value)}
           />
-          <label htmlFor="employmentTypes">Part-Time</label>
+          <label htmlFor="part-time">Part-Time</label>
 
           <input
             type="checkbox"
             id="part-time"
             name="part-time"
-            value={""}
+            value="PARTTIME"
+            checked={employment_types === "PARTTIME"}
             onChange={(e) => setEmployment_Types(e.target.value)}
           />
-          <label htmlFor="employmentTypes">Contractor</label>
+          <label htmlFor="contractor">Contractor</label>
           <input
             type="checkbox"
             name="contractor"
             id="contractor"
-            value={""}
+            value="CONTRACTOR"
+            checked={employment_types === "CONTRACTOR"}
             onChange={(e) => setEmployment_Types(e.target.value)}
           />
         </div>
@@ -129,6 +127,7 @@ const Form = () => {
         <select
           name="jobRequirements"
           id="jobRequirements"
+          value={job_requirements}
           onChange={(e) => setJob_Requirements(e.target.value)}
         >
           <option value="under_3_years_experience">Under 3 years</option>

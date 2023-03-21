@@ -1,0 +1,23 @@
+.Header {
+  display: flex;
+  background-color: aqua;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  font-family: Chewy;
+}
+
+.Header .Nav li {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  /* color: yellow; */
+  text-decoration: none;
+  list-style: none;
+}
+
+.Header .Nav ul {
+  display: flex;
+  flex-direction: row;
+}

@@ -9,16 +9,21 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <Link to="/">
-        <h1>Jobs</h1>
-      </Link>
-      <nav>
-        <ul>
-          <Link to="/jobs/favorites">
-            <li>Favorites</li>
-          </Link>
-        </ul>
-      </nav>
+      <div className="Title">
+        <Link to="/">
+          <h1>BREADWINNERS</h1>
+        </Link>
+        <nav className="Nav">
+          <ul>
+            <Link to="/jobs/favorites">
+              <li>Bread Bank</li>
+            </Link>
+            <Link to="/settings/profile">
+              <li>Profile</li>
+            </Link>
+          </ul>
+        </nav>
+      </div>
       {user ? (
         <button onClick={signOut}>Sign out</button>
       ) : (
