@@ -24,6 +24,7 @@ function App() {
           <Route path="/jobs/favorites" element={<Favorites />} />
           <Route path="/jobs/:id" element={<Details />} />
           <Route path="/settings/profile" element={<Profile />} />
+          <Route path="/apply" element={<Profile />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />

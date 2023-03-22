@@ -35,8 +35,8 @@ export const getJobById = async (
   job_id: string
 ): Promise<SingleJobResponse> => {
   return (
-    await axios.get(baseURL + "/job-details" + encodeURIComponent(job_id), {
-      params: { query: job_id },
+    await axios.get(baseURL + "/job-details", {
+      params: { job_id },
       headers: {
         "X-RapidAPI-Key": key,
         "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
