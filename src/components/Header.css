@@ -2,6 +2,7 @@
   display: flex;
   background-color: aqua;
   justify-content: space-between;
+  width: 100vw;
 }
 
 .Header h1 {
@@ -24,4 +25,8 @@
 
 .Header img {
   height: 17px;
+}
+
+.Header a {
+  text-decoration: none;
 }

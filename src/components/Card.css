@@ -1,26 +1,46 @@
-/* .Card img {
-  height: 20px;
-}
-
-.Card .Toast {
+.Card .ToastContainer {
   background-image: url("../assets/ToastFace.png");
   background-repeat: no-repeat;
   background-size: contain;
   object-fit: contain;
-  width: 50vw;
+  width: 100vw;
   height: 100vh;
-  position: fixed;
+  display: flex;
+  justify-content: center;
 }
 
+.Card .Toast {
+  /* position: fixed; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: 50%;
+}
+
+.Card .Logo,
+.Card .fourOhFour {
+  width: 20vw;
+}
+
+.Card a,
+.Card .fourOhFour {
+  align-self: center;
+  text-decoration: none;
+}
 .Card h3,
 h4 {
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 30px;
   font-size: small;
+  text-align: center;
+  padding: 10px;
 }
 
-.Card .ToastContainer {
-  width: 50vw;
-  align-items: center;
-} */
+.Card li {
+  list-style: none;
+}
+
+.Card button {
+  width: 93;
+  align-self: center;
+}

@@ -6,10 +6,10 @@ import "./Favorites.css";
 
 const Favorites = () => {
   const { favorites } = useContext(FavoritesContext);
-  const { user } = useContext(AuthContext);
+  const { profile } = useContext(AuthContext);
   return (
     <div className="Favorite">
-      {user ? (
+      {profile ? (
         <ul>
           {favorites.map((item) => (
             <Card jobProp={item.job} key={item._id} />

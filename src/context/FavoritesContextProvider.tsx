@@ -40,7 +40,7 @@ const FavoritesContextProvider = ({ children }: Props) => {
   };
 
   const isFav = (job_id: string): boolean =>
-    favorites.some((favorite) => favorite._id === job_id);
+    favorites.some((favorite) => favorite.job.job_id === job_id);
 
   useEffect(() => {
     (async () => {
