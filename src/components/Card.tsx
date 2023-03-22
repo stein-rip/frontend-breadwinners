@@ -13,7 +13,7 @@ interface Props {
 const Card = ({ jobProp }: Props) => {
   const { addFavoriteHandler, deleteFavoriteHandler, isFav } =
     useContext(FavoritesContext);
-  const { user } = useContext(AuthContext);
+  const { profile, user } = useContext(AuthContext);
 
   return (
     <li className="Card">
@@ -36,7 +36,8 @@ const Card = ({ jobProp }: Props) => {
             <h4>{jobProp.job_description.slice(0, 500)} ...</h4>
           </Link>
 
-          {user &&
+          {profile &&
+            user &&
             (isFav(jobProp.job_id) ? (
               <button onClick={() => deleteFavoriteHandler(jobProp.job_id)}>
                 Delete Favorite

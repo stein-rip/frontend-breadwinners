@@ -1,0 +1,11 @@
+.Details {
+  margin: 10px;
+}
+
+.Details .Details {
+  height: 50vh;
+}
+
+.Details Link {
+  background-color: aqua;
+}

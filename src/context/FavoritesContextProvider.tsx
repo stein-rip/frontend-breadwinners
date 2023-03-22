@@ -14,27 +14,27 @@ interface Props {
 
 const FavoritesContextProvider = ({ children }: Props) => {
   const [favorites, setFavorites] = useState<Favorite[]>([]);
-  const { user } = useContext(AuthContext);
+  const { profile } = useContext(AuthContext);
 
   const loadFavorites = useCallback(async () => {
-    if (user) {
-      const favorites: Favorite[] = await getFavorites(user.uid!);
+    if (profile) {
+      const favorites: Favorite[] = await getFavorites(profile._id!);
       setFavorites(favorites);
     } else {
       setFavorites([]);
     }
-  }, [user]);
+  }, [profile]);
 
   const addFavoriteHandler = async (newFavorite: Favorite): Promise<void> => {
-    if (user) {
-      await addFavorite(newFavorite, user.uid!);
+    if (profile) {
+      await addFavorite(newFavorite, profile._id!);
       loadFavorites();
     }
   };
 
   const deleteFavoriteHandler = async (job_id: string): Promise<void> => {
-    if (user) {
-      await deleteFavorite(user.uid!, job_id);
+    if (profile) {
+      await deleteFavorite(profile._id!, job_id);
       loadFavorites();
     }
   };
@@ -46,7 +46,7 @@ const FavoritesContextProvider = ({ children }: Props) => {
     (async () => {
       loadFavorites();
     })();
-  }, [user, loadFavorites]);
+  }, [profile, loadFavorites]);
 
   return (
     <FavoritesContext.Provider
