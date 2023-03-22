@@ -17,7 +17,6 @@ function AuthContextProvider({ children }: { children: ReactNode }) {
     return auth.onAuthStateChanged(async (newUser) => {
       setUser(newUser);
       if (newUser) {
-        console.log(newUser);
         const profile = await getProfile(newUser.uid);
         if (profile) {
           setProfile(profile);
