@@ -1,32 +1,36 @@
 .Header {
-  display: flex;
-  background-color: aqua;
-  justify-content: space-between;
+  padding-top: 30px;
   width: 100vw;
+}
+
+.Header a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Header div.Title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Header h1 {
   font-family: Chewy;
-}
+  align-items: center;
+  justify-content: center;
 
-.Header .Nav li {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-  /* color: yellow; */
-  text-decoration: none;
-  list-style: none;
+  /* font-family: 'Modak', cursive */
 }
-
 .Header .Nav ul {
   display: flex;
   flex-direction: row;
 }
-
-.Header img {
-  height: 17px;
+.Header .Nav li {
+  font-weight: 300;
+  list-style: none;
 }
 
-.Header a {
-  text-decoration: none;
+.Header img {
+  width: 40px;
 }

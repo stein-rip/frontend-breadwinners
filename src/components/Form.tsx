@@ -49,19 +49,18 @@ const Form = () => {
   };
 
   return (
-    <div className="Form">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <h2>Search</h2>
-        <label htmlFor="query">Search</label>
-        <input
-          type="text"
-          name="query"
-          id="query"
-          placeholder="Python Developer in Texas, USA"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          required
-        />
+    <form onSubmit={(e) => handleSubmit(e)}>
+      <label htmlFor="query">Search:</label>
+      <input
+        type="text"
+        name="query"
+        id="query"
+        placeholder="job title, location, etc"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        required
+      />
+      <div className="DatePosted">
         <label htmlFor="datePosted">Date Posted</label>
 
         <select
@@ -76,7 +75,9 @@ const Form = () => {
           <option value="week">Past Week</option>
           <option value="month">Past Month</option>
         </select>
-        <label htmlFor="remoteJobsOnly">Remote</label>
+      </div>
+      <div className="Remote">
+        <label htmlFor="remoteJobsOnly">Remote:</label>
         <input
           type="checkbox"
           name="remoteJobsOnly"
@@ -84,45 +85,47 @@ const Form = () => {
           checked={remote_jobs_only}
           onChange={(e) => setRemote_Jobs_Only(e.target.checked)}
         />
-        <label htmlFor="intern">Intern</label>
-        <div>
-          <input
-            type="checkbox"
-            name="intern"
-            id="intern"
-            value="INTERN"
-            checked={employment_types === "INTERN"}
-            onChange={(e) => setEmployment_Types(e.target.value)}
-          />
-          <label htmlFor="full-time">Full-Time</label>
-          <input
-            type="checkbox"
-            id="full-time"
-            name="full-time"
-            value="FULLTIME"
-            checked={employment_types === "FULLTIME"}
-            onChange={(e) => setEmployment_Types(e.target.value)}
-          />
-          <label htmlFor="part-time">Part-Time</label>
+      </div>
+      <div className="Type">Type:</div>
+      <label htmlFor="intern">Intern</label>
+      <div>
+        <input
+          type="checkbox"
+          name="intern"
+          id="intern"
+          value="INTERN"
+          checked={employment_types === "INTERN"}
+          onChange={(e) => setEmployment_Types(e.target.value)}
+        />
+        <label htmlFor="full-time">Full-Time</label>
+        <input
+          type="checkbox"
+          id="full-time"
+          name="full-time"
+          value="FULLTIME"
+          checked={employment_types === "FULLTIME"}
+          onChange={(e) => setEmployment_Types(e.target.value)}
+        />
+        <label htmlFor="part-time">Part-Time</label>
 
-          <input
-            type="checkbox"
-            id="part-time"
-            name="part-time"
-            value="PARTTIME"
-            checked={employment_types === "PARTTIME"}
-            onChange={(e) => setEmployment_Types(e.target.value)}
-          />
-          <label htmlFor="contractor">Contractor</label>
-          <input
-            type="checkbox"
-            name="contractor"
-            id="contractor"
-            value="CONTRACTOR"
-            checked={employment_types === "CONTRACTOR"}
-            onChange={(e) => setEmployment_Types(e.target.value)}
-          />
-        </div>
+        <input
+          type="checkbox"
+          id="part-time"
+          name="part-time"
+          value="PARTTIME"
+          checked={employment_types === "PARTTIME"}
+          onChange={(e) => setEmployment_Types(e.target.value)}
+        />
+        <label htmlFor="contractor">Contractor</label>
+        <input
+          type="checkbox"
+          name="contractor"
+          id="contractor"
+          value="CONTRACTOR"
+          checked={employment_types === "CONTRACTOR"}
+          onChange={(e) => setEmployment_Types(e.target.value)}
+        />
+
         <label htmlFor="jobRequirements">Experience Level</label>
         <select
           name="jobRequirements"
@@ -137,9 +140,9 @@ const Form = () => {
           <option value="no_experience">No experience</option>
           <option value="no_degree">No degree</option>
         </select>
-        <button>What's baking?</button>
-      </form>
-    </div>
+      </div>
+      <button>What's baking?</button>
+    </form>
   );
 };
 
