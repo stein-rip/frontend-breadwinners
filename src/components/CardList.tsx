@@ -19,12 +19,18 @@ const CardList = ({ jobArrayProp }: Props) => {
     setIndex((prev) => prev + 1);
     addFavoriteHandler({ job: jobArrayProp[index] });
   };
+
   return (
     <div className="CardList">
-      <h2>Find some dough</h2>
-      <Card jobProp={jobArrayProp[index]} />
-      <button onClick={() => nah()}>nah</button>
-      <button onClick={() => yas()}>yas</button>
+      <Card jobProp={jobArrayProp[index]} fromFav={false} />
+      <div className="Buttons">
+        <button className="Nah" onClick={() => nah()}>
+          nah
+        </button>
+        <button className="Yas" onClick={() => yas()}>
+          yas
+        </button>
+      </div>
     </div>
   );
 };

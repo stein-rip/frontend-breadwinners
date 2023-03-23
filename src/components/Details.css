@@ -1,11 +1,25 @@
 .Details {
-  margin: 10px;
+  margin: 20px;
 }
 
 .Details .Details {
-  height: 50vh;
+  height: 100vh;
 }
 
-.Details Link {
-  background-color: aqua;
+.Details h2 {
+  font-size: 30px;
+  font-family: "Fredoka", sans-serif;
+}
+
+.Details.button {
+  font-family: chewy;
+}
+
+.Details img {
+  width: 50px;
+}
+
+.Details a {
+  box-sizing: border-box;
+  border: 1px solid black;
 }

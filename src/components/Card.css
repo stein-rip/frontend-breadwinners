@@ -1,46 +1,43 @@
-.Card .ToastContainer {
+.Card div.Job {
   background-image: url("../assets/ToastFace.png");
   background-repeat: no-repeat;
-  background-size: contain;
-  object-fit: contain;
+  background-size: cover;
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.Card .Toast {
-  /* position: fixed; */
+  height: 100vw;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  height: 50%;
 }
 
-.Card .Logo,
-.Card .fourOhFour {
-  width: 20vw;
-}
-
-.Card a,
-.Card .fourOhFour {
-  align-self: center;
-  text-decoration: none;
-}
-.Card h3,
-h4 {
-  font-size: small;
-  text-align: center;
+.Card img.JobLogo {
+  height: 80px;
   padding: 10px;
 }
 
-.Card li {
-  list-style: none;
+.Card div.Job,
+h2,
+h4,
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(68, 36, 22);
+  font-size: 0.5rem;
+  padding: 50px;
 }
 
-.Card button {
-  width: 93;
+.Card h4,
+h1,
+a {
+  text-decoration: none;
+  color: rgb(77, 46, 34);
+  font-size: 3.5svw;
+  text-align: left;
+  padding: 5px;
+  width: 70vw;
+}
+.Card .fourOhFour {
   align-self: center;
+  text-decoration: none;
+  height: 70px;
+  padding: 10px;
 }
