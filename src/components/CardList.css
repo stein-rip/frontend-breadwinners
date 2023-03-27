@@ -1,6 +1,10 @@
-.CardList .Button {
+/* .CardList .Button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 20;
+} */
+
+.CardList ul {
+  list-style: none;
 }

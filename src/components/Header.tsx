@@ -24,14 +24,22 @@ const Header = () => {
                 <li>profile</li>
               </Link>
             </ul>
-            <p>hi!{user?.displayName}</p>
           </nav>
         )}
-        {user ? (
-          <button onClick={signOut}>Sign out</button>
-        ) : (
-          <button onClick={signInWithGoogle}>Sign in with Google</button>
-        )}
+        <div className="button">
+          <p>
+            hi! {user?.displayName}
+            {/* <img
+              src={user?.photoURL!}
+              alt={`profile picture for: ${user?.displayName}`}
+            /> */}
+          </p>
+          {user ? (
+            <button onClick={signOut}>Sign out</button>
+          ) : (
+            <button onClick={signInWithGoogle}>Sign in with Google</button>
+          )}
+        </div>
       </div>
     </header>
   );
