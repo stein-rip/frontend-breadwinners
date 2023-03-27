@@ -1,36 +1,37 @@
 .Header {
   padding-top: 30px;
-  width: 100vw;
+  background-color: aqua;
 }
 
 .Header a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.Header div.Title {
+  text-decoration: none;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
-
-.Header h1 {
-  font-family: Chewy;
-  align-items: center;
   justify-content: center;
-
-  /* font-family: 'Modak', cursive */
-}
-.Header .Nav ul {
-  display: flex;
-  flex-direction: row;
-}
-.Header .Nav li {
-  font-weight: 300;
-  list-style: none;
 }
 
 .Header img {
   width: 40px;
+}
+
+.Header .Nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.Header .Title .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Header .Title .button img {
+  border-radius: 50%;
+  width: 7%;
+}
+
+.Header h1 {
+  font-family: Chewy;
 }

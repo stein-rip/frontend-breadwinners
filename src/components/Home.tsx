@@ -7,6 +7,7 @@ import { getJobsBySearchTerm } from "../services/JobsService";
 import CardList from "./CardList";
 import Form from "./Form";
 import "./Home.css";
+import ToastMascot from "../assets/ToastMascot.png";
 
 // http://localhost:3000/?search-term=lentils
 
@@ -33,7 +34,14 @@ const Home = () => {
   }, [profile]);
 
   return (
-    <div className="Home">
+    <div className="Toast Home">
+      {!user && !profile && (
+        <img
+          className="Breadwinners Mascot"
+          src={ToastMascot}
+          alt="Breadwinners Mascot"
+        />
+      )}
       {user && !profile && <Form />}
       {user && profile && <CardList jobArrayProp={jobs} />}
     </div>

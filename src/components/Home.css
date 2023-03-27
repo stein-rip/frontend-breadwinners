@@ -1,7 +1,49 @@
-/* .Home {
+.Home {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
+  background-color: rgb(180, 95, 110);
   margin: 0;
+  /* height: 100vh; */
+}
+
+.Home {
+  display: flex;
+  justify-content: center;
+}
+
+.Home img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90vw;
+  height: 50vh;
+  box-sizing: border-box;
+  margin-bottom: 40%;
+}
+
+.Home div.swipe {
+  position: absolute;
+}
+
+.Home .cardContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Home .fourOhFour {
+  align-self: center;
+  text-decoration: none;
+  height: 50px;
+  padding: 10px;
+}
+
+/* .Home .Toast {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90vw;
+  height: 50vh;
+  box-sizing: border-box;
+  margin-bottom: 40%;
 } */

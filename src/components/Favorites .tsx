@@ -3,14 +3,12 @@ import AuthContext from "../context/AuthContext";
 import FavoritesContext from "../context/FavoritesContext";
 import Card from "./Card";
 import "./Favorites.css";
-
 const Favorites = () => {
   const { favorites } = useContext(FavoritesContext);
   const { profile } = useContext(AuthContext);
-
   return (
     <div className="Favorite">
-      <h1>Favorites</h1>
+      <h1>Saved jobs</h1>
       {profile ? (
         <ul>
           {favorites.map((item) => (
@@ -23,5 +21,4 @@ const Favorites = () => {
     </div>
   );
 };
-
 export default Favorites;

@@ -20,36 +20,36 @@ const Card = ({ jobProp, fromFav }: Props) => {
 
   return (
     <li className="Card">
-      <h1></h1>
-      <div className="Job">
-        {jobProp?.employer_logo ? (
-          <Link to={`/jobs/${jobProp?.job_id}`}>
+      <div className="Toast">
+        <div className="Job">
+          {jobProp?.employer_logo ? (
             <img
               className="JobLogo"
               src={jobProp?.employer_logo}
               alt={jobProp?.job_title}
             />
-          </Link>
-        ) : (
-          <img className="fourOhFour" src={Toast404} alt="not found" />
-        )}
-        <h3>{jobProp?.employer_name}</h3>
-        <Link to={`/jobs/${jobProp?.job_id}`}>
-          <h4>{jobProp?.job_title}</h4>
-        </Link>
-        <h4>
-          {jobProp?.job_city} {jobProp?.job_state}
-        </h4>
-        <Link to={`/jobs/${jobProp?.job_id}`}>
-          <h4>{jobProp?.job_description.slice(0, 500)} ...</h4>
-        </Link>
-        {fromFav && <CountDownTimer jobProp={jobProp} />}
-        {profile &&
-          (isFav(jobProp?.job_id) ? (
-            <button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
-              Delete Favorite
-            </button>
-          ) : null)}
+          ) : (
+            <img className="fourOhFour" src={Toast404} alt="not found" />
+          )}
+          <h2>{jobProp?.employer_name}</h2>
+
+          <h1>{jobProp?.job_title}</h1>
+
+          <h3>
+            {jobProp?.job_city} {jobProp?.job_state}
+          </h3>
+
+          <p>{jobProp?.job_description.slice(0, 500)} ...</p>
+
+          {fromFav && <CountDownTimer jobProp={jobProp} />}
+          {profile &&
+            (isFav(jobProp?.job_id) ? (
+              <button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
+                Delete Favorite
+              </button>
+            ) : null)}
+          <button>see more details</button>
+        </div>
       </div>
     </li>
   );

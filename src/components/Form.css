@@ -1,5 +1,52 @@
-Form {
+.Form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.Form .Toast {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90vw;
+  height: 50vh;
+  box-sizing: border-box;
+  margin-bottom: 40%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Form .Type p {
+  text-align: left;
+}
+
+/* .Form h1 {
+  font-size: 14px;
+} */
+/* .Form {
+  height: 100vh;
+} */
+
+/* .FormContainer {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90vw;
+  height: 50vh;
+  box-sizing: border-box;
+} */
+
+.Form form {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  color: rgb(68, 36, 22);
+  font-family: "Fredoka", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
