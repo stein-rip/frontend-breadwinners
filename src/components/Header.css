@@ -1,6 +1,6 @@
 .Header {
   padding-top: 30px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .Header a {
@@ -10,28 +10,82 @@
   justify-content: center;
 }
 
+.Header .Breadwinners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 .Header img {
   width: 40px;
+  height: 41px;
+  margin: 27px;
 }
 
+.Header ul li a {
+  font-family: Concert One;
+  color: pink;
+  font-size: 20px;
+}
+
+.Header .active a {
+  color: yellowgreen;
+}
+/* .Header .Nav ul li a:active {
+  color: rgb(172, 139, 95);
+  text-shadow: 1px 1px 2px white, 0 0 5px green, 0 0 5px white;
+} */
 .Header .Nav ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   list-style: none;
 }
 
-.Header .Title .button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Header .Title .button img {
-  border-radius: 50%;
-  width: 7%;
-}
-
 .Header h1 {
-  font-family: Chewy;
+  font-family: "Modak", cursive;
+  font-weight: lighter;
+  color: rgb(188, 148, 97);
+  -webkit-text-stroke: 2px rgb(197, 114, 5);
+  text-shadow: 0px 0px 5px white, 0 0 6px green, 0 0 5px white;
+  /* text-shadow: 0 0 3px pink, 0 0 1px green; */
+}
+
+.Header .SignIn .Header .SignOut {
+  margin-bottom: 10px;
+}
+
+/* .Header .SignImg {
+  top: 29px;
+  display: flex;
+  position: absolute;
+  left: 326px;
+  height: 42px;
+} */
+
+@media only screen and (min-width: 768px) {
+  .Header h1 {
+    font-size: 50px;
+  }
+  .Header .Nav {
+    font-size: 35px;
+    justify-content: space-between;
+    font-family: Verdana;
+  }
+
+  /* .Header .SignImg {
+    top: 42px;
+    display: flex; */
+  /* position: fixed; */
+  /* left: 760px;
+    height: 42px; */
+  /* }
+
+  /* .Header .SignIn,
+  .Header .SignOut {
+    font-weight: 400;
+    font-size: 14px;
+    top: 46px;
+    right: 357px;
+  } */
 }

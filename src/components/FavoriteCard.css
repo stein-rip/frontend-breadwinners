@@ -1,23 +1,20 @@
-.Card .Toast {
+.FavoriteCard .Toast {
   background-image: url("../assets/ToastFace.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  width: 105vw;
-  height: 50vh;
-  box-sizing: border-box;
-  /* margin-bottom: 40%; */
-  align-items: center;
+  background-size: contain;
+  /* height: 100vh; */
+  height: 410px;
+  position: relative;
   display: flex;
   justify-content: center;
-  max-width: 100%;
-  min-width: 100%;
+  margin-top: 60px;
 }
 
-.Card {
+.FavoriteCard {
   display: flex;
   justify-content: center;
 }
-.Card img.JobLogo {
+.FavoriteCard img.JobLogo {
   height: 3vh;
   background-color: white;
   padding: 5px;
@@ -25,7 +22,7 @@
   box-shadow: 0px 0px 5px white;
 }
 
-.Card .fourOhFour {
+.FavoriteCard .fourOhFour {
   align-self: center;
   text-decoration: none;
   height: 50px;
@@ -33,9 +30,9 @@
   padding: 10px;
 }
 
-.Card .Job {
+.FavoriteCard .Job {
   width: 70%;
-  height: 80%;
+  height: 103%;
   display: flex;
   justify-content: center;
   color: rgb(68, 36, 22);
@@ -46,21 +43,21 @@
   padding: 10px;
 }
 
-.Card .Job h1 {
+.FavoriteCard .Job h1 {
   font-size: 14px;
 }
 
-.Card .Job h2,
+.FavoriteCard .Job h2,
 h3 {
   font-size: 11px;
   margin: 5px;
 }
-.Card .Job p {
+.FavoriteCard .Job p {
   font-size: 10px;
   margin: 5px;
 }
 
-.Card button {
+.FavoriteCard button {
   border-radius: 30px;
   background-color: beige;
   /* color: black; */
@@ -68,27 +65,14 @@ h3 {
   font-family: Verdana;
 }
 
-.Card a {
+.FavoriteCard a {
   text-decoration: none;
   color: saddlebrown;
 }
 
-@media only screen and (min-width: 768px) {
-  .Card .Toast {
-    height: 30rem;
-    width: 29rem;
-    background-repeat: initial;
-    background-size: cover;
-  }
+/* .FavoriteCard .BtnContainer {
 
-  .Card img.JobLogo {
-    margin-bottom: 10px;
-    height: 9vh;
-    /* width: 10vw; */
-  }
-  .Card .fourOhFour {
-    height: 15px;
-    width: 10px;
-    padding: 10px;
-  }
+} */
+
+@media only screen and (min-width: 768px) {
 }

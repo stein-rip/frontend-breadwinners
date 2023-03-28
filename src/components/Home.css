@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  background-color: rgb(180, 95, 110);
+  /* background-color: rgb(180, 95, 110); */
   margin: 0;
   /* height: 100vh; */
 }
@@ -13,13 +13,18 @@
   justify-content: center;
 }
 
-.Home img {
+.Home .BreadwinnersMascot {
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90vw;
+  width: 105vw;
   height: 50vh;
   box-sizing: border-box;
-  margin-bottom: 40%;
+  /* margin-bottom: 40%; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .Home div.swipe {
@@ -34,7 +39,8 @@
 .Home .fourOhFour {
   align-self: center;
   text-decoration: none;
-  height: 50px;
+  height: 72px;
+  width: 72px;
   padding: 10px;
 }
 
@@ -47,3 +53,13 @@
   box-sizing: border-box;
   margin-bottom: 40%;
 } */
+
+@media only screen and (min-width: 768px) {
+  .Home img {
+    height: 85vh;
+  }
+
+  .Home .BreadwinnersMascot {
+    height: 81vh;
+  }
+}

@@ -1,10 +1,17 @@
-/* .CardList .Button {
+.CardList .cardContainer .swipe {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 20;
-} */
+}
 
 .CardList ul {
   list-style: none;
+}
+.CardList .CardTitle {
+  color: white;
+}
+
+.CardList {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
 }

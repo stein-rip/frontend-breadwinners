@@ -17,6 +17,17 @@ p {
   width: 100%; */
 }
 
-body {
+/* body {
   overflow: hidden;
+} */
+
+button {
+  border: 3px solid yellowgreen;
+  background-color: beige;
+  font-family: Verdana;
+  color: saddlebrown;
+}
+
+h1 {
+  color: white;
 }
