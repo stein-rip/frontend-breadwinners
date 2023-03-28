@@ -1,8 +1,18 @@
-.Favorites h1 {
+.Favorites .FavTitle {
   font-size: 14px;
+  color: white;
+}
+
+/* .Favorites .Favorites .fav {
+  display: flex;
+} */
+.Favorites .Favorite {
+  /* height: 30em;
+  width: 29em; */
+  height: 100%;
 }
 
 .Favorites ul {
-  justify-content: center;
-  align-items: center;
+  height: 30em;
+  width: 29em;
 }

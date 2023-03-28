@@ -9,7 +9,7 @@
   background-image: url("../assets/ToastFace.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90vw;
+  width: 108vw;
   height: 50vh;
   box-sizing: border-box;
   margin-bottom: 40%;
@@ -22,9 +22,12 @@
   text-align: left;
 }
 
-/* .Form h1 {
-  font-size: 14px;
-} */
+.Form input {
+  border: none;
+}
+.Form h1 {
+  color: white;
+}
 /* .Form {
   height: 100vh;
 } */
@@ -44,9 +47,22 @@
   display: flex;
   justify-content: center;
   color: rgb(68, 36, 22);
-  font-family: "Fredoka", sans-serif;
+  font-family: Verdana;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Form .FormContainer {
+    width: 50vw;
+    height: 72em;
+  }
+  .Form {
+    height: 74em;
+  }
+  .Form .Toast {
+    height: 100vh;
+  }
 }

@@ -5,6 +5,7 @@ import Card from "./Card";
 import TinderCard from "react-tinder-card";
 import "./CardList.css";
 import Favorite from "../models/Favorite";
+import Greetings from "./Greetings";
 interface Props {
   jobArrayProp: Job[];
 }
@@ -25,7 +26,7 @@ const CardList = ({ jobArrayProp }: Props) => {
   };
   return (
     <div className="CardList">
-      <h1>Availble jobs</h1>
+      <h1 className="CardTitle">Available jobs</h1>
       {/* <link
         href="https://fonts.googleapis.com/css?family=Damion&display=swap"
         rel="stylesheet"
@@ -37,6 +38,7 @@ const CardList = ({ jobArrayProp }: Props) => {
        */}
       <ul>
         <div className="cardContainer">
+          <Greetings />
           {jobs.map((job) => (
             <TinderCard
               className="swipe"

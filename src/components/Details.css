@@ -26,4 +26,56 @@
 
 .Details h1 {
   font-size: 14px;
+  color: white;
+}
+
+.Details .ToastDetails {
+  margin-left: 59px;
+  margin-top: 108px;
+  font-family: Verdana;
+  font-size: 12px;
+  overflow: scroll;
+  width: 309px;
+  height: 273px;
+}
+
+.Details .ToastDetailsImg {
+  position: fixed;
+  width: 100vw;
+  height: 50vh;
+  z-index: -1;
+}
+
+.Details .ApplyBtn {
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  width: 35vw;
+  text-align: center;
+  padding: 4px;
+}
+
+.Details h1 {
+  color: white;
+}
+
+.Details .LogoImg {
+  height: 3vh;
+}
+
+@media only screen and (min-width: 768px) {
+  .Details .ToastDetailsImg {
+    position: fixed;
+    width: 67vw;
+    height: 74vh;
+    right: 200px;
+    z-index: -1;
+  }
+  .Details .ToastDetails {
+    margin-left: 450px;
+    margin-top: 220px;
+    font-family: Verdana;
+    font-size: 21px;
+  }
 }

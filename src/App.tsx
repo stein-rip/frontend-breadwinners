@@ -8,7 +8,7 @@ import {
 import "./App.css";
 
 import Details from "./components/Details";
-import Favorites from "./components/Favorites ";
+import Favorites from "./components/Favorites";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";

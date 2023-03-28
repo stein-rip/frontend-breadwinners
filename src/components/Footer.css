@@ -1,17 +1,95 @@
-/* .Footer {
-  color: pink;
+.Form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
+  align-items: center;
 }
 
-.Footer button {
-  font-stretch: extra-expanded;
-  width: 100vw;
-  color: black;
-  background-color: rgb(253, 252, 250);
+.Form .Toast {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 105vw;
+  height: 50vh;
+  box-sizing: border-box;
+  /* margin-bottom: 40%; */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.Form .Type p {
+  text-align: left;
+}
+
+/* .Form h1 {
+  font-size: 14px;
 } */
+/* .Form {
+  height: 100vh;
+} */
+
+/* .FormContainer {
+  background-image: url("../assets/ToastFace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90vw;
+  height: 50vh;
+  box-sizing: border-box;
+} */
+
+.Form form {
+  width: 70%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  color: rgb(68, 36, 22);
+  font-family: Verdana;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.Form button {
+  border-radius: 36px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: lightgoldenrodyellow;
+}
+
+.Form button:hover {
+  background-color: bisque;
+  color: black;
+  text-shadow: 2px 2px lightgray;
+}
+
+.Form input {
+  margin-top: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.Form label {
+  font-weight: 700;
+  padding: 10px;
+}
+
+.Form p {
+  font-weight: 700;
+}
+
+.Form .FormTitle {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .Form .Toast {
+    width: 60vw;
+    height: 100vh;
+  }
+
+  .Form {
+    height: 100vh;
+  }
+}

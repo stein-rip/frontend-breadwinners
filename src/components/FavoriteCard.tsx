@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./FavoriteCard.css";
 import Toast404 from "../assets/Toast404.png";
 import { Link } from "react-router-dom";
 import FavoritesContext from "../context/FavoritesContext";
@@ -13,13 +13,13 @@ interface Props {
   fromFav: Boolean;
 }
 
-const Card = ({ jobProp, fromFav }: Props) => {
+const FavoriteCard = ({ jobProp, fromFav }: Props) => {
   const { addFavoriteHandler, deleteFavoriteHandler, isFav } =
     useContext(FavoritesContext);
   const { profile, user } = useContext(AuthContext);
 
   return (
-    <li className="Card">
+    <li className="FavoriteCard">
       <div className="Toast">
         <div className="Job">
           {jobProp?.employer_logo ? (
@@ -40,21 +40,22 @@ const Card = ({ jobProp, fromFav }: Props) => {
           </h3>
 
           <p>{jobProp?.job_description.slice(0, 500)} ...</p>
-
-          {profile &&
-            (isFav(jobProp?.job_id) ? (
-              <button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
-                delete favorite
-              </button>
-            ) : null)}
-          <button>
-            <Link to={`/jobs/${jobProp?.job_id}`}>more details</Link>
-          </button>
-          {fromFav && <CountDownTimer jobProp={jobProp} />}
+          <div className="BtnContainer">
+            {profile &&
+              (isFav(jobProp?.job_id) ? (
+                <button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
+                  delete favorite
+                </button>
+              ) : null)}
+            <button>
+              <Link to={`/jobs/${jobProp?.job_id}`}>more details</Link>
+            </button>
+            {fromFav && <CountDownTimer jobProp={jobProp} />}
+          </div>
         </div>
       </div>
     </li>
   );
 };
 
-export default Card;
+export default FavoriteCard;

@@ -3,6 +3,7 @@ import Job from "../models/Job";
 import "./Details.css";
 import { Link, useParams } from "react-router-dom";
 import { getJobById } from "../services/JobsService";
+import ToastDetails from "../assets/ToastDetails.png";
 
 // http://localhost:3000/jobs/0g9WUnfaU9EoxTVK4N
 
@@ -20,10 +21,17 @@ const Details = () => {
 
   return (
     <div className="Details">
+      <img className="ToastDetailsImg" src={ToastDetails} alt="Toast" />
       <h1>more details</h1>
-      <div className="Toast">
-        <h2>{jobs?.job_title}</h2>
-        <img src={jobs?.employer_logo} alt={jobs?.job_title} />
+      <div className="Toast ToastDetails">
+        <h2>
+          {jobs?.job_title}{" "}
+          <img
+            className="LogoImg"
+            src={jobs?.employer_logo}
+            alt={jobs?.job_title}
+          />
+        </h2>
         <p>{jobs?.employer_website}</p> <h2>{jobs?.employer_name}</h2>
         <h3>{jobs?.employer_company_type}</h3>
         <h3>{jobs?.job_is_remote}</h3>

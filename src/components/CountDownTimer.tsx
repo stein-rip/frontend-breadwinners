@@ -12,7 +12,7 @@ const ExpiredNotice = () => {
 const ShowCounter = ({ days, hours, minutes, seconds }: any) => {
   return (
     <div className="show-counter">
-      Job expires:{`${days}D`}:{` ${hours}h`}:{minutes}:{seconds}
+      job expires:{`${days}d`}:{`${hours}h`}:{`${minutes}m`}:{`${seconds}s`}
     </div>
   );
 };

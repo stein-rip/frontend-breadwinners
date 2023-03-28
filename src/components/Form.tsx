@@ -2,6 +2,7 @@ import { FormEvent, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import "./Form.css";
+import Greetings from "./Greetings";
 
 const Form = () => {
   const { user, profile, addProfileHandler } = useContext(AuthContext);
@@ -50,19 +51,22 @@ const Form = () => {
 
   return (
     <div className="Form">
-      <h1>form</h1>
+      {/* <h1>form</h1> */}
       <div className="Toast FormContainer">
         <form onSubmit={(e) => handleSubmit(e)}>
-          <label htmlFor="query">Search:</label>
-          <input
-            type="text"
-            name="query"
-            id="query"
-            placeholder="job title, location, etc"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            required
-          />
+          {/* <h1>Get that bread!</h1> */}
+          <div>
+            <label htmlFor="query">Search:</label>
+            <input
+              type="text"
+              name="query"
+              id="query"
+              placeholder="job title, location, etc"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              required
+            />
+          </div>
           <div className="DatePosted">
             <label htmlFor="datePosted">Date Posted</label>
 
@@ -80,7 +84,7 @@ const Form = () => {
             </select>
           </div>
           <div className="Remote">
-            <label htmlFor="remoteJobsOnly">Remote:</label>
+            <label htmlFor="remoteJobsOnly">Remote Jobs Only:</label>
             <input
               type="checkbox"
               name="remoteJobsOnly"
@@ -149,6 +153,7 @@ const Form = () => {
           <button>What's baking?</button>
         </form>
       </div>
+      {/* <Greetings /> */}
     </div>
   );
 };
