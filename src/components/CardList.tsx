@@ -43,7 +43,7 @@ const CardList = ({ jobArrayProp }: Props) => {
             <TinderCard
               className="swipe"
               key={job.job_id}
-              onSwipe={(dir) => swiped(dir, job.job_id, { job })}
+              onSwipe={(dir:any) => swiped(dir, job.job_id, { job })}
               onCardLeftScreen={() => outOfFrame(job.job_title)}
             >
               <Card jobProp={job} fromFav={false} />
