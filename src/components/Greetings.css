@@ -47,10 +47,10 @@ margin: 20%;
 }
 .Greetings .Toast .Intro {
   width: 50%;
-  height: 50%;
   position: absolute;
   /* new */
   text-align: center;
+
 }
 
 .Greetings .Toast .Job p {

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .Form .BreadwinnersToast {
   position: relative;
   width: 90%;
@@ -12,6 +13,7 @@
 .Form .Toast form {
   width: 50%;
   position: absolute;
+  font-size: 17px;
 }
 
 /* new */
@@ -65,7 +67,7 @@
   }
 }
 
-@media only screen and (min-width: 1040px) {
+/* @media only screen and (min-width: 1040px) {
   .Form .BreadwinnersToast {
     width: 40%;
     position: relative;
@@ -80,4 +82,4 @@
     justify-content: center;
     align-items: center;
   }
-}
+} */
