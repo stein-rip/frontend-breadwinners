@@ -1,60 +1,18 @@
-.FavoriteCard .Toast {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* height: 100vh; */
-  height: 410px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.FavoriteCard {
-  display: flex;
-  justify-content: center;
-}
-.FavoriteCard img.JobLogo {
-  height: 3vh;
-  background-color: white;
-  padding: 5px;
-  border-radius: 30%;
-  box-shadow: 0px 0px 5px white;
-}
-
-.FavoriteCard .fourOhFour {
-  align-self: center;
-  text-decoration: none;
-  height: 50px;
-  width: 25px;
-  padding: 10px;
-}
-
-.FavoriteCard .Job {
-  width: 70%;
-  height: 103%;
-  display: flex;
-  justify-content: center;
+.FavoriteCard{
+  align-items:center;
+  text-align: center;
+  display: flex; 
   color: rgb(68, 36, 22);
   font-family: Verdana;
   flex-direction: column;
+}
+
+.FavoriteCard .Toast {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 10px;
-}
 
-.FavoriteCard .Job h1 {
-  font-size: 14px;
-}
-
-.FavoriteCard .Job h2,
-h3 {
-  font-size: 11px;
-  margin: 5px;
-}
-.FavoriteCard .Job p {
-  font-size: 10px;
-  margin: 5px;
 }
 
 .FavoriteCard button {
@@ -65,14 +23,78 @@ h3 {
   font-family: Verdana;
 }
 
+.FavoriteCard button:hover {
+  background-color: rgb(198, 231, 133);
+  color: black;
+  text-shadow: 2px 2px lightgray;
+}
 .FavoriteCard a {
   text-decoration: none;
   color: saddlebrown;
 }
+.FavoriteCard h1{
+  max-height: 100px;
+  max-width: 100%;
+  font-size: 14px;
+}
+.FavoriteCard .Job h2,
+h3 {
+  font-size: 11px;
+  margin: 5px;
+}
+.FavoriteCard .Job p {
+  font-size: 10px;
+  margin: 5px;
+}
 
-/* .FavoriteCard .BtnContainer {
+.FavoriteCard .BreadwinnersToast {
+  position: relative;
+  width: 90%;
+}
+
+
+.FavoriteCard .Toast .Job {
+  width: 50%;
+  position: absolute;
+ 
+}
+.FavoriteCard .Toast .Job img {
+  max-height: 40px;
+  max-width: 100%;
+}
+
+.FavoriteCard img.JobLogo {
+  box-shadow: 0px 0px 5px white;
+  border-radius: 30%;
+}
+
+
+.FavoriteCard .Job .BtnContainer .show-counter {
+  color: pink;
+  font-family: Concert One;
+}
+.FavoriteCard .Job .BtnContainer .expired-notice {
+  color: rgb(236, 88, 88);
+  font-family: Concert One;
+}
+@media only screen and (min-width: 768px){
+
+  .FavoriteCard .BreadwinnersToast {
+    width: 90%;
+  }
+  .FavoriteCard .Toast .Job {
+    width: 17%;
+  
+  }
+}
+  /* @media only screen and (min-width: 1020px){
+
+    .FavoriteCard .BreadwinnersToast {
+      width: 90%;
+    }
+    .FavoriteCard .Toast .Job {
+      width: 17%;
+    
+    }
 
 } */
-
-@media only screen and (min-width: 768px) {
-}

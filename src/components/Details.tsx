@@ -4,6 +4,7 @@ import "./Details.css";
 import { Link, useParams } from "react-router-dom";
 import { getJobById } from "../services/JobsService";
 import ToastDetails from "../assets/ToastDetails.png";
+import BreadwinnersToast from "../assets/ToastFace.png";
 
 // http://localhost:3000/jobs/0g9WUnfaU9EoxTVK4N
 
@@ -21,17 +22,17 @@ const Details = () => {
 
   return (
     <div className="Details">
+      <div className="Toast">
       <img className="ToastDetailsImg" src={ToastDetails} alt="Toast" />
-      <h1>more details</h1>
-      <div className="Toast ToastDetails">
-        <h2>
-          {jobs?.job_title}{" "}
+      <div className="ToastDetails">
+
+        
           <img
             className="LogoImg"
             src={jobs?.employer_logo}
             alt={jobs?.job_title}
           />
-        </h2>
+         <h2> {jobs?.job_title}{" "}</h2>
         <p>{jobs?.employer_website}</p> <h2>{jobs?.employer_name}</h2>
         <h3>{jobs?.employer_company_type}</h3>
         <h3>{jobs?.job_is_remote}</h3>
@@ -62,10 +63,13 @@ const Details = () => {
       <h3>{jobs?.job_required_experience.experience_preferred}</h3>
       <h3>{jobs?.job_required_experience.no_experience_required}</h3>
       <h3>{jobs?.job_required_experience.required_experience_in_months}</h3> */}
-        <a href={`${jobs?.job_apply_link}`} target="_blank">
+     
+      </div>
+      <a href={`${jobs?.job_apply_link}`} target="_blank">
           Apply
         </a>
       </div>
+    
     </div>
   );
 };

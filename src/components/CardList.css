@@ -1,17 +1,34 @@
-.CardList .cardContainer .swipe {
+
+.CardList .Toast{
+
   display: flex;
+  position: relative;
+}
+
+.CardList .cardContainer .swipe {
+   width: 100vw;
+  position: fixed;
+} 
+
+.CardList h1{
+  max-height: 100px;
+  max-width: 100%;
+  font-size: 16px;
 }
 
 .CardList ul {
   list-style: none;
+
 }
 .CardList .CardTitle {
   color: white;
+
 }
 
-.CardList {
-  overflow: hidden;
-}
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
+  .CardList .Toast{
+    width: 0;
+    display: flex;
 }
+} */

@@ -2,20 +2,26 @@ import "./Greetings.css";
 import ToastFace from "../assets/ToastFace.png";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
+import BreadwinnersToast from "../assets/ToastFace.png";
 
 const Greetings = () => {
   const { user, profile } = useContext(AuthContext);
   return (
     <div className="Greetings">
       <div className="Toast">
+      <img
+          className="BreadwinnersToast"
+          src={BreadwinnersToast}
+          alt="BreadwinnersToast"
+        />
         <div className="Intro">
           {/* <img className="ToastFaceImg" src={ToastFace} alt="Toast" /> */}
           <p>
-            Welcome, {profile?.display_name}!{" "}
+           Hi! {profile?.display_name}!{" "}
             <img
               className="UserImg"
               src={user?.photoURL!}
-              alt={`profile picture for: ${user?.displayName}`}
+              // alt={`profile picture for: ${user?.displayName}`}
             />
           </p>
           <p>

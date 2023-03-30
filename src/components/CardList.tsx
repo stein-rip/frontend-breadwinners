@@ -6,6 +6,7 @@ import TinderCard from "react-tinder-card";
 import "./CardList.css";
 import Favorite from "../models/Favorite";
 import Greetings from "./Greetings";
+import BreadwinnersToast from "../assets/ToastFace.png";
 interface Props {
   jobArrayProp: Job[];
 }
@@ -26,7 +27,7 @@ const CardList = ({ jobArrayProp }: Props) => {
   };
   return (
     <div className="CardList">
-      <h1 className="CardTitle">Available jobs</h1>
+ 
       {/* <link
         href="https://fonts.googleapis.com/css?family=Damion&display=swap"
         rel="stylesheet"
@@ -43,7 +44,7 @@ const CardList = ({ jobArrayProp }: Props) => {
             <TinderCard
               className="swipe"
               key={job.job_id}
-              onSwipe={(dir:any) => swiped(dir, job.job_id, { job })}
+              onSwipe={(dir) => swiped(dir, job.job_id, { job })}
               onCardLeftScreen={() => outOfFrame(job.job_title)}
             >
               <Card jobProp={job} fromFav={false} />

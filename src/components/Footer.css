@@ -1,95 +1,39 @@
-.Form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.Form .Toast {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 105vw;
-  height: 50vh;
-  box-sizing: border-box;
-  /* margin-bottom: 40%; */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.Form .Type p {
-  text-align: left;
-}
-
-/* .Form h1 {
-  font-size: 14px;
-} */
-/* .Form {
-  height: 100vh;
-} */
-
-/* .FormContainer {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 90vw;
-  height: 50vh;
-  box-sizing: border-box;
-} */
-
-.Form form {
-  width: 70%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  color: rgb(68, 36, 22);
-  font-family: Verdana;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-}
-
-.Form button {
-  border-radius: 36px;
-  margin-top: 20px;
-  padding: 15px;
-  background-color: lightgoldenrodyellow;
-}
-
-.Form button:hover {
-  background-color: bisque;
-  color: black;
-  text-shadow: 2px 2px lightgray;
-}
-
-.Form input {
-  margin-top: 10px;
-  border-radius: 30px;
-  text-align: center;
-}
-
-.Form label {
-  font-weight: 700;
-  padding: 10px;
-}
-
-.Form p {
-  font-weight: 700;
-}
-
-.Form .FormTitle {
-  color: white;
-}
-
-@media only screen and (min-width: 768px) {
-  .Form .Toast {
-    width: 60vw;
-    height: 100vh;
+.Footer .Nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
   }
 
-  .Form {
-    height: 100vh;
+
+  .Footer ul a {
+    font-family: Concert One;
+    color: pink;
+    font-size: 4vh;
   }
-}
+  .Footer .active a {
+    color: yellowgreen;
+  }
+  
+
+  .Footer a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .Footer {
+        bottom: 0;
+        left: 43%;
+    }
+  }
+
+  /* @media only screen and (min-width: 1020px) {
+    .Footer {
+        bottom: 0;
+        left: 43%;
+        position: fixed;
+    }
+  } */

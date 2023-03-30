@@ -1,68 +1,88 @@
-.Form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.Form .Toast {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 108vw;
-  height: 50vh;
-  box-sizing: border-box;
-  margin-bottom: 40%;
-  align-items: center;
+
+ .Form .Toast {
+  /* position: relative; */
   display: flex;
   justify-content: center;
-}
-
-.Form .Type p {
-  text-align: left;
-}
-
-.Form input {
-  border: none;
-}
-.Form h1 {
-  color: white;
-}
-/* .Form {
-  height: 100vh;
-} */
-
-/* .FormContainer {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 90vw;
-  height: 50vh;
-  box-sizing: border-box;
-} */
-
-.Form form {
-  width: 70%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  color: rgb(68, 36, 22);
-  font-family: Verdana;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 10px;
+  
+
+}
+.Form .BreadwinnersToast {
+  position: relative;
+  width: 90%;
+  
+  
 }
 
+.Form .Toast form {
+  width: 50%;
+  position: absolute;
+
+ 
+}
+
+.Form button {
+  border-radius: 36px;
+  padding: 5px;
+  background-color: bisque;
+}
+.Form button:hover {
+  background-color: rgb(198, 231, 133);
+  color: black;
+  text-shadow: 2px 2px lightgray;
+}
 @media only screen and (min-width: 768px) {
-  .Form .FormContainer {
-    width: 50vw;
-    height: 72em;
+  .Form .BreadwinnersToast {
+    width: 81%;
+    position: relative;
+    display: flex;
+
   }
-  .Form {
-    height: 74em;
+  .Form .Toast form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    font-size: 27px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
   }
-  .Form .Toast {
-    height: 100vh;
+}
+
+@media only screen and (min-width: 1020px){
+  .Form .BreadwinnersToast {
+    width: 81%;
+    position: relative;
+    display: flex;
+
+  }
+  .Form .Toast form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-size: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+@media only screen and (min-width: 1040px){
+  .Form .BreadwinnersToast {
+    width: 40%;
+    position: relative;
+    display: flex;
+
+  }
+  .Form .Toast form {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-size: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
   }
 }
