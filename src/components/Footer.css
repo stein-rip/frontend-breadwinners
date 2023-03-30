@@ -1,4 +1,7 @@
 .Footer {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   position: fixed;
 }
 
@@ -37,16 +40,4 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .Footer {
-    bottom: 0;
-    left: 43%;
-  }
 }
-
-/* @media only screen and (min-width: 1020px) {
-    .Footer {
-        bottom: 0;
-        left: 43%;
-        position: fixed;
-    }
-  } */

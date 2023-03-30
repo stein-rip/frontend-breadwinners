@@ -41,13 +41,10 @@ const Home = () => {
           alt="Breadwinners Mascot"
         />
       )}
-      {/* {user && !profile && <Form />} */}
+      {user && !profile && <Form />}
       {user && profile && <CardList jobArrayProp={jobs} />}
-      
     </div>
-    
   );
-  
 };
 
 // dough rising (waiting gif)-->cardlist

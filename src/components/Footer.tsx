@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Link, useResolvedPath, useMatch } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
-// import "./Footer.css";
+import "./Footer.css";
 
 const Footer = () => {
   const { user, profile } = useContext(AuthContext);

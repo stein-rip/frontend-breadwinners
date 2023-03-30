@@ -1,6 +1,6 @@
 .Header {
   padding-top: 30px;
-  
+
   /* background-color: aqua; */
 }
 
@@ -16,11 +16,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
- 
 }
 .Header img {
-width: 10vw;
-padding: 4px;
+  width: 10vw;
+  padding: 4px;
 }
 
 /* .Header ul li a {
@@ -41,7 +40,6 @@ padding: 4px;
 }
 
 .Header h1 {
-
   font-family: "Modak", cursive;
   font-weight: lighter;
   font-size: 8vw;
@@ -57,9 +55,7 @@ padding: 4px;
 } */
 
 @media only screen and (min-width: 768px) {
-
 }
-
 
 @media only screen and (min-width: 1020px) {
   .Header h1 {
@@ -69,15 +65,11 @@ padding: 4px;
   }
   .Header img {
     width: 6vw;
-padding: 7px;
+    padding: 7px;
   }
   .Header .Nav {
     font-size: 35px;
     justify-content: space-between;
     font-family: Verdana;
   }
-  .Header ul li a {
-   
-  }
-
 }

@@ -13,8 +13,6 @@ interface Props {
 const CardList = ({ jobArrayProp }: Props) => {
   const [lastDirection, setLastDirection] = useState();
   const { addFavoriteHandler } = useContext(FavoritesContext);
-  const db = jobArrayProp;
-  const jobs = db;
   const swiped = (direction: any, nameToDelete: any, job: Favorite) => {
     console.log("removing: " + nameToDelete);
     setLastDirection(direction);
@@ -25,9 +23,14 @@ const CardList = ({ jobArrayProp }: Props) => {
   const outOfFrame = (name: any) => {
     console.log(name + " left the screen!");
   };
+
+  const [trigger, setTrigger] = useState(false);
+  setTimeout(() => {
+    setTrigger(true);
+  }, 5000);
+
   return (
     <div className="CardList">
- 
       {/* <link
         href="https://fonts.googleapis.com/css?family=Damion&display=swap"
         rel="stylesheet"
@@ -39,8 +42,9 @@ const CardList = ({ jobArrayProp }: Props) => {
        */}
       <ul>
         <div className="cardContainer">
-          <Greetings />
-          {jobs.map((job) => (
+          {!trigger && <Greetings />}
+
+          {jobArrayProp.map((job) => (
             <TinderCard
               className="swipe"
               key={job.job_id}
