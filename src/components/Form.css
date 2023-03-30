@@ -1,31 +1,30 @@
-
-
- .Form .Toast {
+.Form .Toast {
   /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
-  
-
 }
 .Form .BreadwinnersToast {
   position: relative;
   width: 90%;
-  
-  
 }
 
 .Form .Toast form {
   width: 50%;
   position: absolute;
+}
 
- 
+/* new */
+.Form input {
+  border-radius: 36px;
+  border: none;
 }
 
 .Form button {
   border-radius: 36px;
   padding: 5px;
-  background-color: bisque;
+  /* new */
+  background-color: beige;
 }
 .Form button:hover {
   background-color: rgb(198, 231, 133);
@@ -37,7 +36,6 @@
     width: 81%;
     position: relative;
     display: flex;
-
   }
   .Form .Toast form {
     display: flex;
@@ -50,12 +48,11 @@
   }
 }
 
-@media only screen and (min-width: 1020px){
+@media only screen and (min-width: 1020px) {
   .Form .BreadwinnersToast {
     width: 81%;
     position: relative;
     display: flex;
-
   }
   .Form .Toast form {
     display: flex;
@@ -68,13 +65,11 @@
   }
 }
 
-
-@media only screen and (min-width: 1040px){
+@media only screen and (min-width: 1040px) {
   .Form .BreadwinnersToast {
     width: 40%;
     position: relative;
     display: flex;
-
   }
   .Form .Toast form {
     display: flex;

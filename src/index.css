@@ -19,6 +19,9 @@ p {
 
 body {
   overflow-x: hidden;
+  /* new */
+  font-family: Verdana;
+  color: saddlebrown;
 }
 
 button {

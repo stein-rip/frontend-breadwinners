@@ -40,7 +40,6 @@ margin: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 .Greetings .BreadwinnersToast {
   position: relative;
@@ -49,30 +48,31 @@ margin: 20%;
 .Greetings .Toast .Intro {
   width: 50%;
   position: absolute;
+  /* new */
+  text-align: center;
 }
 
 .Greetings .Toast .Job p {
   display: none;
-
 }
 .Greetings .UserImg {
   width: 10%;
-  
+  /* new */
+  border-radius: 50%;
 }
 
 @media only screen and (min-width: 768px) {
   .Greetings .Toast .Intro p {
     display: initial;
-    
-    }
-    .Greetings .BreadwinnersToast {
-      width: 80%;
-    }
-    .Greetings .Toast.Intro {
-      width: 25%;
-    }
+  }
+  .Greetings .BreadwinnersToast {
+    /* new */
+    width: 87%;
+  }
+  .Greetings .Toast.Intro {
+    width: 25%;
+  }
 }
-
 
 /* @media only screen and (min-width: 1020px){
   .Greetings .Toast .Intro p {

@@ -1,36 +1,49 @@
+.Footer {
+  position: fixed;
+}
+
 .Footer .Nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+}
 
+.Footer ul a {
+  font-family: Concert One;
+  color: pink;
+  font-size: 4vh;
+}
+.Footer .active a {
+  color: yellowgreen;
+}
 
-  .Footer ul a {
-    font-family: Concert One;
-    color: pink;
-    font-size: 4vh;
-  }
-  .Footer .active a {
-    color: yellowgreen;
-  }
-  
+/* new */
+.Footer a:hover {
+  -webkit-text-stroke: 1px rgb(228, 135, 150);
+  /* -webkit-text-stroke: 1px rgb(130, 75, 4); */
+}
 
-  .Footer a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* new */
+.Footer .active a:hover {
+  -webkit-text-stroke: 1px rgb(119, 167, 23);
+}
 
-  @media only screen and (min-width: 768px) {
-    .Footer {
-        bottom: 0;
-        left: 43%;
-    }
-  }
+.Footer a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* @media only screen and (min-width: 1020px) {
+@media only screen and (min-width: 768px) {
+  .Footer {
+    bottom: 0;
+    left: 43%;
+  }
+}
+
+/* @media only screen and (min-width: 1020px) {
     .Footer {
         bottom: 0;
         left: 43%;
