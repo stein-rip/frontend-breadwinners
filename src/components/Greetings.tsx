@@ -35,7 +35,7 @@ const Greetings = () => {
             in time.
           </p>
           <br />
-          <h2>Let's get this bread!</h2>
+          {/* <h2>Let's get this bread!</h2> */}
         </div>
       </div>
     </div>

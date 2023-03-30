@@ -14,8 +14,12 @@ const Footer = () => {
       {profile && (
         <nav className="Nav">
           <ul>
-            <CustomLink to="/jobs/favorites">saved</CustomLink>
-            <CustomLink to="/settings/profile">profile</CustomLink>
+            <CustomLink property="saved" to="/jobs/favorites">
+              saved
+            </CustomLink>
+            <CustomLink property="profile" to="/settings/profile">
+              profile
+            </CustomLink>
           </ul>
         </nav>
       )}
@@ -23,11 +27,11 @@ const Footer = () => {
   );
 };
 
-const CustomLink = ({ to, children }: any) => {
+const CustomLink = ({ to, children, property }: any) => {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });
   return (
-    <li className={isActive ? "active" : ""}>
+    <li className={`${property} ${isActive ? "active" : ""}`}>
       <Link to={to}>{children}</Link>
     </li>
   );

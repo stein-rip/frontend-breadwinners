@@ -16,11 +16,18 @@
   font-family: Concert One;
   color: pink;
   font-size: 4vh;
+  margin: 5px;
 }
 .Footer .active a {
   color: yellowgreen;
 }
 
+.Footer .saved {
+  border-right: 2px solid pink;
+}
+.Footer .profile {
+  border-left: 2px solid greenyellow;
+}
 /* new */
 .Footer a:hover {
   -webkit-text-stroke: 1px rgb(228, 135, 150);
