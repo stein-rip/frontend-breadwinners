@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import { signInWithGoogle } from "../firebaseConfig";
 import Job from "../models/Job";
 import { getJobsBySearchTerm } from "../services/JobsService";
 import CardList from "./CardList";
@@ -34,7 +33,7 @@ const Home = () => {
   }, [profile]);
 
   return (
-    <div className="Toast Home">
+    <div className="Home">
       {!user && !profile && (
         <img
           className="Breadwinners Mascot"
@@ -42,10 +41,13 @@ const Home = () => {
           alt="Breadwinners Mascot"
         />
       )}
-      {user && !profile && <Form />}
+      {/* {user && !profile && <Form />} */}
       {user && profile && <CardList jobArrayProp={jobs} />}
+      
     </div>
+    
   );
+  
 };
 
 // dough rising (waiting gif)-->cardlist

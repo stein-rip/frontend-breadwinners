@@ -3,28 +3,23 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-  /* background-color: rgb(180, 95, 110); */
   margin: 0;
-  /* height: 100vh; */
+  /* overflow: hidden; */
+
 }
 
-.Home {
+/* .Home {
   display: flex;
   justify-content: center;
-}
+  flex-direction: column;
+} */
 
-.Home .BreadwinnersMascot {
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 105vw;
-  height: 50vh;
-  box-sizing: border-box;
-  /* margin-bottom: 40%; */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  min-width: 100%;
+/* .Home div.Breadwinners{
+  width: 40px;
+} */
+
+.Home .Mascot {
+width: 90%
 }
 
 .Home div.swipe {
@@ -44,22 +39,14 @@
   padding: 10px;
 }
 
-/* .Home .Toast {
-  background-image: url("../assets/ToastFace.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 90vw;
-  height: 50vh;
-  box-sizing: border-box;
-  margin-bottom: 40%;
-} */
-
 @media only screen and (min-width: 768px) {
-  .Home img {
-    height: 85vh;
-  }
+  .Home .Mascot {
+    width: 30%
+    }
+}
 
-  .Home .BreadwinnersMascot {
-    height: 81vh;
-  }
+@media only screen and (min-width: 1020px) {
+  .Home .Mascot {
+    width: 40%;
+    }
 }

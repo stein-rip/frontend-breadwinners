@@ -4,15 +4,16 @@ import Job from "../models/Job";
 const ExpiredNotice = () => {
   return (
     <div className="expired-notice">
-      <span>12:03:44</span>
-      <p>(future timer)</p>
+      <span>Oh no, stale bread!</span>
+      <p>This job has expired</p>
     </div>
   );
 };
 const ShowCounter = ({ days, hours, minutes, seconds }: any) => {
   return (
     <div className="show-counter">
-      job expires:{`${days}d`}:{`${hours}h`}:{`${minutes}m`}:{`${seconds}s`}
+      <p>job will expire in:</p>
+      {`${days}d`}:{`${hours}h`}:{`${minutes}m`}:{`${seconds}s`}
     </div>
   );
 };

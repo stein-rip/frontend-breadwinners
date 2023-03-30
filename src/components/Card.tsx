@@ -5,7 +5,7 @@ import FavoritesContext from "../context/FavoritesContext";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 import Job from "../models/Job";
-
+import BreadwinnersToast from "../assets/ToastFace.png";
 import CountDownTimer from "./CountDownTimer";
 
 interface Props {
@@ -21,6 +21,11 @@ const Card = ({ jobProp, fromFav }: Props) => {
   return (
     <li className="Card">
       <div className="Toast">
+      <img
+          className="BreadwinnersToast"
+          src={BreadwinnersToast}
+          alt="BreadwinnersToast"
+        />
         <div className="Job">
           {jobProp?.employer_logo ? (
             <img
@@ -38,7 +43,6 @@ const Card = ({ jobProp, fromFav }: Props) => {
           <h3>
             {jobProp?.job_city} {jobProp?.job_state}
           </h3>
-
           <p>{jobProp?.job_description.slice(0, 500)} ...</p>
 
           {profile &&

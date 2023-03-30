@@ -1,81 +1,146 @@
-/* .Details {
-  margin: 20px;
-}
-
-.Details .Details {
-  height: 100vh;
-}
-
-.Details h2 {
-  font-size: 30px;
-  font-family: "Fredoka", sans-serif;
-}
-
-.Details.button {
-  font-family: chewy;
-}
-
-.Details img {
-  width: 50px;
-}
-
-.Details a {
-  box-sizing: border-box;
-  border: 1px solid black;
-} */
+/* 
 
 .Details h1 {
   font-size: 14px;
   color: white;
 }
+.Details .cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.Details .ToastDetailsImg{
+  width:100vw;
+}
 
 .Details .ToastDetails {
-  margin-left: 59px;
-  margin-top: 108px;
-  font-family: Verdana;
-  font-size: 12px;
-  overflow: scroll;
-  width: 309px;
-  height: 273px;
-}
-
-.Details .ToastDetailsImg {
-  position: fixed;
   width: 100vw;
-  height: 50vh;
-  z-index: -1;
-}
-
-.Details .ApplyBtn {
-  border-radius: 30px;
-  background-color: white;
-  color: black;
-  font-weight: bold;
-  width: 35vw;
-  text-align: center;
-  padding: 4px;
-}
-
-.Details h1 {
-  color: white;
-}
+  }
 
 .Details .LogoImg {
   height: 3vh;
-}
+} */
 
-@media only screen and (min-width: 768px) {
-  .Details .ToastDetailsImg {
+/* @media only screen and (min-width: 768px) { */
+  /* .Details .ToastDetailsImg {
     position: fixed;
     width: 67vw;
     height: 74vh;
     right: 200px;
     z-index: -1;
+  } */
+
+  /* .Details .ToastDetailsImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
   }
-  .Details .ToastDetails {
-    margin-left: 450px;
-    margin-top: 220px;
-    font-family: Verdana;
-    font-size: 21px;
-  }
+} */
+
+.Details .Toast{
+  display: flex;
+  flex-direction: column;
+}
+
+.Details a {
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: beige;
+  color: black;
+  width: 18vw;
+  text-align: center;
+  padding: 4px;
+  border: 3px solid yellowgreen;
+  font-family: Verdana;
+}
+
+
+.Details a:hover {
+  background-color: rgb(198, 231, 133);
+  color: black;
+  text-shadow: 2px 2px lightgray;
+}
+.Details .Toast {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.Details .ToastDetailsImg {
+  position: relative;
+  width: 90%;
+}
+
+.Details .Toast .ToastDetails h2{
+  font-size: small;
+  color:black
+}
+
+.Details .Toast .ToastDetails {
+  font-family: Verdana;
+  color: rgb(130, 75, 4);
+  text-align: center;
+  font-size: smaller;
+
+}
+
+.Details .Toast .ToastDetails {
+  width: 68%;
+  height:36%;
+  position: absolute;
+  overflow: scroll;
+ 
+}
+.Details .Toast .ToastDetails img{
+  max-height: 100px;
+  max-width: 100%;
+
+}
+
+.Details a:hover {
+  background-color: rgb(198, 231, 133);
+  color: black;
+  text-shadow: 2px 2px lightgray;
+}
+
+.Details .Toast .ToastDetails .LogoImg{
+  border-radius: 30%;
+}
+
+@media only screen and (min-width: 768px) {
+  .Details.Toast .Job p {
+    display: initial;
+    
+    }
+    .Details .ToastDetailsImg {
+      width: 77%;
+    }
+    .Details .Toast .ToastDetails {
+      width: 25%;
+    
+    }
+}
+
+@media only screen and (min-width: 1020px){
+  .Details.Toast .Job p {
+    display: initial;
+    
+    }
+    .Details .ToastDetailsImg {
+      width: 40%;
+    }
+    .Details .Toast .ToastDetails {
+      width: 30%;
+      height: 42%;
+    
+    }
+    .Details .Toast .ToastDetails {
+      font-size: 1vw;
+  
+    
+    }
 }

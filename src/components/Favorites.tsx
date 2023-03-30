@@ -1,15 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext} from "react";
 import AuthContext from "../context/AuthContext";
 import FavoritesContext from "../context/FavoritesContext";
-import Card from "./Card";
+
 import FavoriteCard from "./FavoriteCard";
 import "./Favorites.css";
 const Favorites = () => {
   const { favorites } = useContext(FavoritesContext);
   const { profile } = useContext(AuthContext);
-  console.log(window.location);
+  console.log(favorites);
+
   return (
-    <div className="Favorite">
+    <div className="Favorites">
       {/* <h1 className="FavTitle">Saved jobs</h1> */}
       {profile ? (
         <ul>

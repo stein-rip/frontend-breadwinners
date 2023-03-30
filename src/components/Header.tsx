@@ -18,6 +18,7 @@ const Header = () => {
         <Link to="/">
           <h1>BREADWINNERS</h1>
         </Link>
+        
         {/* <img className="SignImg" src={ToastFace} alt="Toast"  */}
         {/* <button><img src="./img/google.png" alt="my image" onClick={this.myfunction} /></button> */}
         {user ? (
@@ -40,30 +41,13 @@ const Header = () => {
       </div>
       {profile && (
         <nav className="Nav">
-          <ul>
-            <CustomLink to="/jobs/favorites">saved</CustomLink>
-            <CustomLink to="/settings/profile">profile</CustomLink>
-          </ul>
-        </nav>
+{/* <ul>
+  <CustomLink to="/jobs/favorites">saved</CustomLink>
+  <CustomLink  to="/settings/profile">profile</CustomLink>
+</ul> */}
+</nav>
       )}
-      <div className="button">
-        {/* <p>
-            {user && profile ? "hi!" : ""} {user && profile?.display_name}
-            <img
-              src={user?.photoURL!}
-              alt={`profile picture for: ${user?.displayName}`}
-            />
-          </p> */}
-        {/* {user ? (
-            <button className="SignIn" onClick={signOut}>
-              sign out
-            </button>
-          ) : (
-            <button className="SignOut" onClick={signInWithGoogle}>
-              sign in
-            </button>
-          )} */}
-      </div>
+  
     </header>
   );
 };
@@ -74,7 +58,10 @@ const CustomLink = ({ to, children }: any) => {
     <li className={isActive ? "active" : ""}>
       <Link to={to}>{children}</Link>
     </li>
+    
   );
-};
+  
+}
+
 
 export default Header;

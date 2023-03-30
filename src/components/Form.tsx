@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import "./Form.css";
 import Greetings from "./Greetings";
+import BreadwinnersToast from "../assets/ToastFace.png";
 
 const Form = () => {
   const { user, profile, addProfileHandler } = useContext(AuthContext);
@@ -50,10 +51,14 @@ const Form = () => {
   };
 
   return (
-    <div className="Form">
-      {/* <h1>form</h1> */}
+    <div className="Form">  
       <div className="Toast FormContainer">
-        <form onSubmit={(e) => handleSubmit(e)}>
+      <img
+    className="BreadwinnersToast"
+    src={BreadwinnersToast}
+    alt="Breadwinners Toast"
+  />
+          <form onSubmit={(e) => handleSubmit(e)}>
           {/* <h1>Get that bread!</h1> */}
           <div>
             <label htmlFor="query">Search:</label>
@@ -151,8 +156,11 @@ const Form = () => {
             </select>
           </div>
           <button>What's baking?</button>
+          
         </form>
+        
       </div>
+  
       {/* <Greetings /> */}
     </div>
   );
