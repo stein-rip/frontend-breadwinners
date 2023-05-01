@@ -1,34 +1,27 @@
-
-.CardList .Toast{
-
-  display: flex;
-  position: relative;
+.CardList .Toast {
+	display: flex;
 }
 
 .CardList .cardContainer .swipe {
-   width: 100vw;
-  position: fixed;
-} 
+	position: fixed;
+	visibility: none;
+}
 
-.CardList h1{
-  max-height: 100px;
-  max-width: 100%;
-  font-size: 16px;
+.CardList h1 {
+	max-height: 100px;
+
+	font-size: 16px;
 }
 
 .CardList ul {
-  list-style: none;
-
+	list-style: none;
 }
 .CardList .CardTitle {
-  color: white;
-
+	color: white;
 }
-
-
 /* @media only screen and (min-width: 768px) {
-  .CardList .Toast{
-    width: 0;
-    display: flex;
-}
+	.CardList .Toast {
+		width: 0;
+		display: flex;
+	}
 } */

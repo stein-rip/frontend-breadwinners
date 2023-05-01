@@ -11,40 +11,40 @@ import ToastMascot from "../assets/ToastMascot.png";
 // http://localhost:3000/?search-term=lentils
 
 const Home = () => {
-  const { user, profile } = useContext(AuthContext);
-  const [jobs, setJobs] = useState<Job[]>([]);
+	const { user, profile } = useContext(AuthContext);
+	const [jobs, setJobs] = useState<Job[]>([]);
 
-  useEffect(() => {
-    (async () => {
-      if (profile) {
-        const jobs: Job[] = (
-          await getJobsBySearchTerm(
-            profile.query,
-            profile.date_posted,
-            profile.job_is_remote,
-            profile.job_employment_type,
-            profile.experience_level
-          )
-        ).data;
+	useEffect(() => {
+		(async () => {
+			if (profile) {
+				const jobs: Job[] = (
+					await getJobsBySearchTerm(
+						profile.query,
+						profile.date_posted,
+						profile.job_is_remote,
+						profile.job_employment_type,
+						profile.experience_level
+					)
+				).data;
 
-        setJobs(jobs);
-      }
-    })();
-  }, [profile]);
+				setJobs(jobs);
+			}
+		})();
+	}, [profile]);
 
-  return (
-    <div className="Home">
-      {!user && !profile && (
-        <img
-          className="Breadwinners Mascot"
-          src={ToastMascot}
-          alt="Breadwinners Mascot"
-        />
-      )}
-      {user && !profile && <Form />}
-      {user && profile && <CardList jobArrayProp={jobs} />}
-    </div>
-  );
+	return (
+		<div className="Home">
+			{!user && !profile && (
+				<img
+					className="Breadwinners Mascot BreadBase"
+					src={ToastMascot}
+					alt="Breadwinners Mascot"
+				/>
+			)}
+			{user && !profile && <Form />}
+			{user && profile && <CardList jobArrayProp={jobs} />}
+		</div>
+	);
 };
 
 // dough rising (waiting gif)-->cardlist
@@ -61,6 +61,8 @@ const Home = () => {
 // get a bread start
 // in the oven
 // burnt toast
+
+//crouton status (dried up)
 // adjust filter in heel of bread-->put form on last card in rotation
 
 export default Home;

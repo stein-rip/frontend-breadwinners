@@ -1,31 +1,15 @@
-/* 
-.Greetings .Toast{
-display: flex;
-height: 100vh;
+.Greetings {
+	display: flex;
+	width: 100vw;
 }
-.Greetings .Toast {
-  background-image: url("../assets/ToastFace.png"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100vw;
-}
-
-.Greetings .Intro {
-margin: 20%;
-  color: rgb(68, 36, 22);
-  font-family: Verdana;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  text-align: center;
+.Greetings {
+	background-image: url("../assets/ToastMascot.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
 }
 
-.Greetings .UserImg {
-  width: 3vw;
-  
-}
-
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .Greetings .Toast {
     height: 30em;
     width: 29em;
@@ -34,9 +18,9 @@ margin: 20%;
     width: 1rem;
     height: 1rem;
   }
-} */
-.Greetings .Toast {
-  /* position: relative; */
+}  */
+/* .Greetings .Toast {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +32,7 @@ margin: 20%;
 .Greetings .Toast .Intro {
   width: 50%;
   position: absolute;
-  /* new */
+  new
   text-align: center;
 
 }
@@ -58,7 +42,7 @@ margin: 20%;
 }
 .Greetings .UserImg {
   width: 10%;
-  /* new */
+  new
   border-radius: 50%;
 }
 
@@ -67,13 +51,13 @@ margin: 20%;
     display: initial;
   }
   .Greetings .BreadwinnersToast {
-    /* new */
+    new
     width: 81%;
   }
   .Greetings .Toast.Intro {
     width: 25%;
   }
-}
+} */
 
 /* @media only screen and (min-width: 1020px){
   .Greetings .Toast .Intro p {

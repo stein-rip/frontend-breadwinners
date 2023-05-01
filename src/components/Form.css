@@ -1,71 +1,71 @@
 .Form .Toast {
-  /* position: relative; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.Form .BreadwinnersToast {
-  position: relative;
-  width: 90%;
+.Form .search input {
+	width: 57vw;
+	height: 4vh;
+}
+
+.Form div.Remote {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-indent: 2vw;
+	color: black;
+	padding: 4vw;
+}
+
+.Form select {
+	width: 60vw;
+	padding: 2vw;
 }
 
 .Form .Toast form {
-  width: 50%;
-  position: absolute;
-  font-size: 17px;
+	width: 60vw;
+	position: absolute;
+	bottom: 8vh;
+	font-size: 2.8vw;
 }
-
-/* new */
 .Form input {
-  border-radius: 36px;
-  border: none;
+	border: 3px solid yellowgreen;
+	background-color: beige;
+	font-family: Verdana;
+	border-radius: 6px;
 }
-
 .Form button {
-  border-radius: 36px;
-  padding: 5px;
-  /* new */
-  background-color: beige;
-}
-.Form button:hover {
-  background-color: rgb(198, 231, 133);
-  color: black;
-  text-shadow: 2px 2px lightgray;
-}
-@media only screen and (min-width: 768px) {
-  .Form .BreadwinnersToast {
-    width: 81%;
-    position: relative;
-    display: flex;
-  }
-  .Form .Toast form {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    font-size: 27px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-  }
+	/* height: 4vh; */
+	width: 60vw;
+	background-color: rgb(199, 238, 170);
+	font-family: "Sigmar", cursive;
+	font-size: 4.5vw;
+	font-weight: lighter;
+	color: rgb(19, 14, 3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@media only screen and (min-width: 1020px) {
-  .Form .BreadwinnersToast {
-    width: 81%;
-    position: relative;
-    display: flex;
-  }
-  .Form .Toast form {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    font-size: 30px;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-  }
-}
+/* @media only screen and (min-width: 1020px) {
+	.Form .BreadwinnersToast {
+		width: 81%;
+		position: relative;
+		display: flex;
+	}
+	.Form .Toast form {
+		display: flex;
+		flex-direction: column;
+		width: 35%;
+		font-size: 30px;
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+	}
+} */
 
 /* @media only screen and (min-width: 1040px) {
   .Form .BreadwinnersToast {

@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { Link } from "react-router-dom";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyD3OB6JuOMDuwIgVOm2jy5VSLWvpNp3AJM",
-  authDomain: "breadwinner-fork.firebaseapp.com",
-  projectId: "breadwinner-fork",
-  storageBucket: "breadwinner-fork.appspot.com",
-  messagingSenderId: "837145168412",
-  appId: "1:837145168412:web:c80fefe535684c8b492dd9",
+  apiKey: "AIzaSyDyoc8QRiRPp2ePhrC_o_q5xwlF4f5WmU4",
+  authDomain: "breadwinners-fork.firebaseapp.com",
+  projectId: "breadwinners-fork",
+  storageBucket: "breadwinners-fork.appspot.com",
+  messagingSenderId: "162812804556",
+  appId: "1:162812804556:web:e0b993f7123970e20bf169"
 };
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

@@ -1,50 +1,48 @@
 .Footer {
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  position: fixed;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
 }
 
 .Footer .Nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	list-style: none;
 }
 
 .Footer ul a {
-  font-family: Concert One;
-  color: pink;
-  font-size: 4vh;
-  margin: 5px;
+	font-family: Concert One;
+	color: pink;
+	font-size: 4vh;
+	margin: 5px;
 }
 .Footer .active a {
-  color: yellowgreen;
+	color: yellowgreen;
 }
 
 .Footer .saved {
-  border-right: 2px solid pink;
+	border-right: 2px solid pink;
 }
 .Footer .profile {
-  border-left: 2px solid greenyellow;
+	border-left: 2px solid greenyellow;
 }
-/* new */
-.Footer a:hover {
-  -webkit-text-stroke: 1px rgb(228, 135, 150);
-  /* -webkit-text-stroke: 1px rgb(130, 75, 4); */
+new .Footer a:hover {
+	-webkit-text-stroke: 1px rgb(228, 135, 150);
+	-webkit-text-stroke: 1px rgb(130, 75, 4);
 }
 
-/* new */
-.Footer .active a:hover {
-  -webkit-text-stroke: 1px rgb(119, 167, 23);
+new .Footer .active a:hover {
+	-webkit-text-stroke: 1px rgb(119, 167, 23);
 }
 
 .Footer a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@media only screen and (min-width: 768px) {
-}
+/* @media only screen and (min-width: 768px) {
+}  */

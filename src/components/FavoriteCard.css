@@ -1,86 +1,83 @@
 .FavoriteCard {
-  align-items: center;
-  text-align: center;
-  display: flex;
-  color: rgb(68, 36, 22);
-  font-family: Verdana;
-  flex-direction: column;
+	/* text-align: center; */
+	display: flex;
+	color: rgb(68, 36, 22);
+	font-family: Verdana;
 }
 
-.FavoriteCard .Toast {
-  /* position: relative; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.FavoriteCard .BreadBase {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .FavoriteCard button {
-  border-radius: 30px;
-  background-color: beige;
-  /* color: black; */
-  margin: 10px;
-  font-family: Verdana;
+	border-radius: 30px;
+	background-color: beige;
+	color: black;
+	margin: 10px;
+	font-family: Verdana;
 }
 
 .FavoriteCard button:hover {
-  background-color: rgb(198, 231, 133);
-  color: black;
-  text-shadow: 2px 2px lightgray;
+	background-color: rgb(198, 231, 133);
+	color: black;
+	text-shadow: 2px 2px lightgray;
 }
 .FavoriteCard a {
-  text-decoration: none;
-  color: saddlebrown;
+	text-decoration: none;
+	color: saddlebrown;
 }
 .FavoriteCard h1 {
-  max-height: 100px;
-  max-width: 100%;
-  font-size: 14px;
+	max-height: 100px;
+	max-width: 100%;
+	font-size: 14px;
 }
 .FavoriteCard .Job h2,
 h3 {
-  font-size: 11px;
-  margin: 5px;
+	font-size: 11px;
+	margin: 5px;
 }
 .FavoriteCard .Job p {
-  font-size: 10px;
-  margin: 5px;
+	font-size: 10px;
+	margin: 5px;
 }
 
-.FavoriteCard .BreadwinnersToast {
-  position: relative;
-  width: 90%;
-}
+/* .FavoriteCard .BreadBase {
+	position: relative;
+	width: 100vw;
+} */
 
 .FavoriteCard .Toast .Job {
-  width: 50%;
-  position: absolute;
+	width: 50%;
+	position: absolute;
 }
 .FavoriteCard .Toast .Job img {
-  max-height: 40px;
-  max-width: 100%;
+	max-height: 40px;
+	max-width: 100%;
 }
 
 .FavoriteCard img.JobLogo {
-  box-shadow: 0px 0px 5px white;
-  /* new */
-  border-radius: 36px;
+	box-shadow: 0px 0px 5px white;
+	border-radius: 36px;
 }
 
 .FavoriteCard .Job .BtnContainer .show-counter {
-  color: pink;
-  font-family: Concert One;
+	color: pink;
+	font-family: Concert One;
 }
 .FavoriteCard .Job .BtnContainer .expired-notice {
-  color: rgb(236, 88, 88);
-  font-family: Concert One;
+	color: rgb(236, 88, 88);
+	font-family: Concert One;
 }
 @media only screen and (min-width: 768px) {
-  .FavoriteCard .BreadwinnersToast {
-    width: 90%;
-  }
-  .FavoriteCard .Toast .Job {
-    width: 17%;
-  }
+	.FavoriteCard .BreadwinnersToast {
+		width: 90%;
+	}
+	.FavoriteCard .Toast .Job {
+		width: 17%;
+	}
 }
 /* @media only screen and (min-width: 1020px){
 
