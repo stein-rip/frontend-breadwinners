@@ -1,146 +1,45 @@
-/* 
-
-.Details h1 {
-  font-size: 14px;
-  color: white;
-}
-.Details .cardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-
-.Details .ToastDetailsImg{
-  width:100vw;
-}
-
-.Details .ToastDetails {
-  width: 100vw;
-  }
-
-.Details .LogoImg {
-  height: 3vh;
-} */
-
-/* @media only screen and (min-width: 768px) { */
-/* .Details .ToastDetailsImg {
-    position: fixed;
-    width: 67vw;
-    height: 74vh;
-    right: 200px;
-    z-index: -1;
-  } */
-
-/* .Details .ToastDetailsImg{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-  }
-} */
-
-/* .Details .Toast{
-  display: flex;
-  flex-direction: column;
-}
-
-.Details a {
-  border-radius: 30px;
-  text-decoration: none;
-  background-color: beige;
-  color: black;
-  width: 18vw;
-  text-align: center;
-  padding: 4px;
-  border: 3px solid yellowgreen;
-  font-family: Verdana;
-}
-
-
-.Details a:hover {
-  background-color: rgb(198, 231, 133);
-  color: black;
-  text-shadow: 2px 2px lightgray;
-}
 .Details .Toast {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
+
 .Details .ToastDetailsImg {
-  position: relative;
-  width: 90%;
+	width: 100vw;
 }
 
-.Details .Toast .ToastDetails h2{
-  font-size: small;
-  color:black
-}
-
-.Details .Toast .ToastDetails {
-  font-family: Verdana;
-  color: rgb(130, 75, 4);
-  text-align: center;
-  font-size: smaller;
-
+.Details .Toast .ToastDetails h2 {
+	font-size: small;
+	color: black;
 }
 
 .Details .Toast .ToastDetails {
-  width: 68%;
-  height:36%;
-  position: absolute;
-  overflow: scroll;
- 
-}
-.Details .Toast .ToastDetails img{
-  max-height: 100px;
-  max-width: 100%;
-
+	width: 70vw;
+	height: 30vh;
+	position: absolute;
+	overflow: scroll;
+	top: 70px;
 }
 
-.Details a:hover {
-  background-color: rgb(198, 231, 133);
-  color: black;
-  text-shadow: 2px 2px lightgray;
+.Details .Toast .ToastDetails .LogoImg {
+	border-radius: 30%;
+	position: absolute;
+	width: 17vw;
+	top: -1vh;
+	left: 45vw;
 }
-
-.Details .Toast .ToastDetails .LogoImg{
-  border-radius: 30%;
+.Details a {
+	border-radius: 12px;
+	text-decoration: none;
+	background-color: beige;
+	color: saddlebrown;
+	text-align: center;
+	padding: 2px;
+	border: 3px solid yellowgreen;
+	position: absolute;
+	top: 6vh;
+	left: 45vw;
+	width: 14vw;
 }
-
-@media only screen and (min-width: 768px) {
-  .Details.Toast .Job p {
-    display: initial;
-    
-    }
-    .Details .ToastDetailsImg {
-      width: 77%;
-    }
-    .Details .Toast .ToastDetails {
-      width: 25%;
-    
-    }
-}
-
-@media only screen and (min-width: 1020px){
-  .Details.Toast .Job p {
-    display: initial;
-    
-    }
-    .Details .ToastDetailsImg {
-      width: 40%;
-    }
-    .Details .Toast .ToastDetails {
-      width: 30%;
-      height: 42%;
-    
-    }
-    .Details .Toast .ToastDetails {
-      font-size: 1vw;
-  
-    
-    }
-} */

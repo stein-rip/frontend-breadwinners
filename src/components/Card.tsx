@@ -43,7 +43,7 @@ const Card = ({ jobProp, fromFav }: Props) => {
 					{/* <h3>
 						{jobProp?.job_city} {jobProp?.job_state}
 					</h3> */}
-					<p>{jobProp?.job_description.slice(0, 300)} ...</p>
+					<p>{jobProp?.job_description.slice(0, 250)} ...</p>
 
 					{profile &&
 						(isFav(jobProp?.job_id) ? (
