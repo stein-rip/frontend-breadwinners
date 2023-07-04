@@ -1,47 +1,46 @@
 .Footer {
-	bottom: 15px;
-	left: 50%;
-	transform: translateX(-50%);
-	position: fixed;
+	position: relative;
+	margin-top: 110%;
 }
 
 .Footer .Nav ul {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 	list-style: none;
 }
 
 .Footer ul a {
 	font-family: Concert One;
-	color: pink;
-	font-size: 4vh;
-	margin: 5px;
-}
-.Footer .active a {
-	color: yellowgreen;
-}
-
-.Footer .saved {
-	border-right: 2px solid pink;
-}
-.Footer .profile {
-	border-left: 2px solid greenyellow;
-}
-new .Footer a:hover {
-	-webkit-text-stroke: 1px rgb(228, 135, 150);
-	-webkit-text-stroke: 1px rgb(130, 75, 4);
-}
-
-new .Footer .active a:hover {
-	-webkit-text-stroke: 1px rgb(119, 167, 23);
-}
-
-.Footer a {
+	font-size: 2vh;
 	text-decoration: none;
+}
+
+.Footer .saved a {
+	border: 3px solid rgb(59, 58, 58);
+	color: rgb(59, 58, 58);
+	border-radius: 12px;
+	padding: 5px;
+}
+.Footer .profile a {
+	border: 3px solid rgb(59, 58, 58);
+	color: rgb(59, 58, 58);
+	border-radius: 12px;
+	padding: 5px;
+}
+
+.Footer .Last {
+	font-size: 0.4em;
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.Footer img {
+	position: absolute;
+	left: 46.5%;
+	height: 6vh;
 }
 
 /* @media only screen and (min-width: 768px) {

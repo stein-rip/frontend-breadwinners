@@ -1,5 +1,5 @@
 import "./Card.css";
-import Toast404 from "../assets/Toast404.png";
+import ToastMascot from "../assets/ToastMascot.png";
 import { Link } from "react-router-dom";
 import FavoritesContext from "../context/FavoritesContext";
 import { useContext } from "react";
@@ -26,31 +26,30 @@ const Card = ({ jobProp, fromFav }: Props) => {
 					src={BreadwinnersToast}
 					alt="BreadwinnersToast"
 				/>
-				<div className="Job">
-					<div className="logo-container">
-						{jobProp?.employer_logo ? (
-							<img
-								className="JobLogo"
-								src={jobProp?.employer_logo}
-								alt={jobProp?.job_title}
-							/>
-						) : (
-							<img className="fourOhFour" src={Toast404} alt="not found" />
-						)}
-					</div>
-					<h1>{jobProp?.job_title}</h1>
+
+				<div className="logo-container">
+					{jobProp?.employer_logo ? (
+						<img
+							className="JobLogo"
+							src={jobProp?.employer_logo}
+							alt={jobProp?.job_title}
+						/>
+					) : (
+						<img className="fourOhFour" src={ToastMascot} alt="not found" />
+					)}
+
+					<h2>{jobProp?.job_title}</h2>
 
 					{/* <h3>
-						{jobProp?.job_city} {jobProp?.job_state}
-					</h3> */}
-					<p>{jobProp?.job_description.slice(0, 250)} ...</p>
-
-					{profile &&
+					{jobProp?.job_city} {jobProp?.job_state}
+				</h3> */}
+					<p>{jobProp?.job_description.slice(0, 200)} ...</p>
+					{/* {profile &&
 						(isFav(jobProp?.job_id) ? (
 							<button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
 								delete favorite
 							</button>
-						) : null)}
+						) : null)} */}
 					{fromFav && <CountDownTimer jobProp={jobProp} />}
 				</div>
 			</div>

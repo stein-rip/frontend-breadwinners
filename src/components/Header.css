@@ -1,32 +1,31 @@
 /* stein edit  */
 .Header {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	/*  */
+	justify-content: space-evenly;
 }
-.Header div {
+/* .Header div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.Header .header-text-container {
-	width: 75vw;
-}
+} */
 
 .Header h1 {
 	font-family: "Sigmar", cursive;
-	font-size: 8vw;
-	color: rgb(14, 9, 5);
+	font-size: 6.5vh;
+	color: rgb(55, 50, 46);
+	padding: 20px;
+	height: 10vh;
 }
 
 .Header img {
-	display: flex;
-	height: 3.5vh;
-	text-decoration: none;
+	height: 8vh;
 }
 
 .Header a {
 	text-decoration: none;
+}
+
+.Header button {
+	height: 4vh;
+	width: 5vh;
 }

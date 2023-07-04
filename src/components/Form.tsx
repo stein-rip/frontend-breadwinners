@@ -2,12 +2,11 @@ import { FormEvent, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 import "./Form.css";
-import Greetings from "./Greetings";
+
 import BreadwinnersToast from "../assets/ToastFace.png";
 
 const Form = () => {
 	const { user, profile, addProfileHandler } = useContext(AuthContext);
-	console.log(profile);
 	const [query, setQuery] = useState(profile?.query || "");
 	const [date_posted, setDate_posted] = useState(profile?.date_posted || "all");
 	const [remote_jobs_only, setRemote_Jobs_Only] = useState(
@@ -57,9 +56,11 @@ const Form = () => {
 				src={BreadwinnersToast}
 				alt="Breadwinners Toast"
 			/>
+			{/* <h5>Welcome! Your dough is on the way.</h5> */}
 			<div className="Toast FormContainer">
 				<form onSubmit={(e) => handleSubmit(e)}>
 					<div className="Selections">
+						<p>Type a job title, location, or both!</p>
 						<div className="search">
 							<label htmlFor="query"></label>
 							<input
@@ -127,6 +128,10 @@ const Form = () => {
 						</div>
 					</div>
 					<div className="remote-container">
+						<p>
+							Swipe results left to discard, or right to save. You got this,{" "}
+							{user?.displayName}!
+						</p>
 						<button>Get that bread!</button>
 					</div>
 				</form>

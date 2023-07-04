@@ -8,16 +8,15 @@
 
 .Form .search input {
 	width: 57vw;
-	height: 4vh;
+	height: 2vh;
 }
 
 .Form div.Remote {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: right;
 	text-indent: 2vw;
 	color: black;
-	padding: 4vw;
 }
 
 .Form select {
@@ -38,7 +37,6 @@
 	border-radius: 6px;
 }
 .Form button {
-	/* height: 4vh; */
 	width: 60vw;
 	background-color: rgb(199, 238, 170);
 	font-family: "Sigmar", cursive;
@@ -48,6 +46,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.Form p {
+	display: flex;
+	justify-content: center;
+	padding: 3px;
 }
 
 /* @media only screen and (min-width: 1020px) {

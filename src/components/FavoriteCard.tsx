@@ -1,5 +1,5 @@
 import "./FavoriteCard.css";
-import Toast404 from "../assets/Toast404.png";
+import ToastMascot from "../assets/ToastMascot.png";
 import { Link } from "react-router-dom";
 import FavoritesContext from "../context/FavoritesContext";
 import { useContext } from "react";
@@ -34,7 +34,7 @@ const FavoriteCard = ({ jobProp, fromFav }: Props) => {
 							alt={jobProp?.job_title}
 						/>
 					) : (
-						<img className="fourOhFour" src={Toast404} alt="not found" />
+						<img className="fourOhFour" src={ToastMascot} alt="not found" />
 					)}
 					<h2>{jobProp?.employer_name}</h2>
 
@@ -49,11 +49,11 @@ const FavoriteCard = ({ jobProp, fromFav }: Props) => {
 						{profile &&
 							(isFav(jobProp?.job_id) ? (
 								<button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>
-									delete favorite
+									unfavorite
 								</button>
 							) : null)}
 						<button>
-							<Link to={`/jobs/${jobProp?.job_id}`}>more details</Link>
+							<Link to={`/jobs/${jobProp?.job_id}`}>see more</Link>
 						</button>
 						{fromFav && <CountDownTimer jobProp={jobProp} />}
 					</div>

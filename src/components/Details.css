@@ -8,28 +8,9 @@
 
 .Details .ToastDetailsImg {
 	width: 100vw;
+	/* display: flex; */
 }
 
-.Details .Toast .ToastDetails h2 {
-	font-size: small;
-	color: black;
-}
-
-.Details .Toast .ToastDetails {
-	width: 70vw;
-	height: 30vh;
-	position: absolute;
-	overflow: scroll;
-	top: 70px;
-}
-
-.Details .Toast .ToastDetails .LogoImg {
-	border-radius: 30%;
-	position: absolute;
-	width: 17vw;
-	top: -1vh;
-	left: 45vw;
-}
 .Details a {
 	border-radius: 12px;
 	text-decoration: none;
@@ -39,7 +20,28 @@
 	padding: 2px;
 	border: 3px solid yellowgreen;
 	position: absolute;
-	top: 6vh;
-	left: 45vw;
-	width: 14vw;
+	top: 16vh;
+	left: 29vw;
+	width: 40vw;
 }
+
+.Details .Toast .ToastDetails h2 {
+	font-size: small;
+	color: rgb(62, 61, 61);
+}
+
+.Details .Toast .ToastDetails {
+	width: 70vw;
+	height: 40vh;
+	position: absolute;
+	overflow: scroll;
+	top: 140px;
+}
+
+/* .Details .Toast .ToastDetails .LogoImg {
+	border-radius: 30%;
+	position: absolute;
+
+	top: -1vh;
+	left: 45vw;
+} */

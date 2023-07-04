@@ -5,12 +5,13 @@ import {
 	Routes,
 } from "react-router-dom";
 import "./App.css";
-import Details from "./components/Details";
+
 import Favorites from "./components/Favorites";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
+import Details from "./components/Details";
 
 function App() {
 	return (

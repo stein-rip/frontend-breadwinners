@@ -1,5 +1,5 @@
 .CardList .Toast {
-	display: flex;
+	position: relative;
 }
 
 .CardList .cardContainer .swipe {
@@ -9,7 +9,6 @@
 
 .CardList h1 {
 	max-height: 100px;
-
 	font-size: 16px;
 }
 

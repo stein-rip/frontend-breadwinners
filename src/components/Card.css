@@ -1,6 +1,10 @@
-.Card {
-	position: absolute;
-	width: 100vw;
+.Toast {
+	display: flex;
+	align-items: center;
+	flex-direction: column-reverse;
+	color: black;
+	font-family: Verdana;
+	text-align: center;
 }
 
 .Card div.logo-container {
@@ -11,182 +15,27 @@
 
 .Card img.JobLogo,
 img.fourOhFour {
-	height: 12vw;
-	top: 10vh;
+	height: 7vh;
 	position: absolute;
-	border-radius: 4px;
+	top: 60px;
+	/* border: 5px solid black; */
+	border-radius: 12px;
 }
 
-.Card .Job {
-	color: rgb(68, 36, 22);
-	font-family: Verdana;
-	text-align: center;
-	width: 100vw;
+.Card p {
+	font-size: 10pt;
+	width: 70%;
 	position: absolute;
-	display: flex;
+	top: 180px;
 }
 
-.Card .Job h1 {
-	display: flex;
-	justify-content: center;
-	font-size: 3vw;
+.Card h2 {
+	width: 75vw;
+	font-size: 1.5vh;
 	position: absolute;
-	top: 19vh;
-	left: 26vw;
-	width: 50vw;
-}
-
-.Card .Job p {
-	width: 76vw;
-	font-size: 3.5vw;
-	position: absolute;
-	left: 12vw;
-	top: 26vh;
+	top: 130px;
 }
 
 .Card button {
-	position: absolute;
 	font-size: smaller;
-	top: 45.8vh;
-	right: 35vw;
 }
-/* @media only screen and (min-width: 768px) { */
-/* .Card .Toast {
-    height: 30rem;
-    width: 29rem;
-    background-repeat: initial;
-    background-size: cover;
-  } */
-
-/* .Card .Toast{ */
-/* height: 30em; */
-/* width: 29em;   */
-/* height: 80vh;
-      width: 80vh;
-  } */
-
-/* .Card .Job {
-      margin: 20%;
-        color: rgb(68, 36, 22);
-        font-family: Verdana;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-      }
-  } */
-
-/* .Card img.JobLogo {
-    margin-bottom: 10px; */
-/* height: 9vh; */
-/* width: 10vw;
-  }
-  .Card .fourOhFour {
-    align-self: center;
-    text-decoration: none;
-    height: 20%;
-    padding: 10px;
-  } */
-
-/* .Card .Toast {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  .Card .BreadwinnersToast {
-    position: relative;
-    width: 90%;
-  }
-
-  .Card {
-    font-family: Verdana;
-  }
-  .Card .Toast .Job {
-    width: 50%;
-    position: absolute;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Card .Toast .Job img {
-    max-height: 75px;
-    max-width: 100%;
-    }
-
-  .Card .Toast .Job p {
-    display: none;
-  
-  }
-
-  .Card img.JobLogo {
-    height: 3vh;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 0px 0px 5px white;
-  }
-  
-
-
-  .Card button {
-    border-radius: 30px;
-    background-color: beige;
-    margin: 10px;
-    font-family: Verdana;
-  
-  }
-  .Card button:hover {
-    background-color: rgb(198, 231, 133);
-    color: black;
-    text-shadow: 2px 2px lightgray;
-  }
-  
-  .Card a {
-    text-decoration: none;
-    color: saddlebrown;
-  } 
-  
-  @media only screen and (min-width: 768px) {
-    .Card .Toast .Job p {
-      display: initial;
-      
-      }
-      .Card .BreadwinnersToast {
-        width: 81%;
-      }
-      .Card .Toast .Job {
-        width: 43%;
-      
-      }
-  }
-
- 
-  
-
-  @media only screen and (min-width: 1020px){
-    .Card .Toast .Job p {
-    display: initial;
-    
-    }
-    .Card .BreadwinnersToast {
-      width: 56%;
-    }
-    .Card .Toast .Job {
-      width: 25%;
-    
-    }
-  }
-
-  @media only screen and (min-width: 1040px){
-    .Card .Toast .Job p {
-    display: initial;
-    
-    }
-    .Card .BreadwinnersToast {
-      width: 40%;
-    }
-    .Card .Toast .Job {
-      width: 25%;
-    
-    }
-  } */
