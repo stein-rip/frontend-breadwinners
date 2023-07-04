@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "breadwinner-fork",
+    "default": "breadwinners-fork",
     "build": "breadwinners-fork"
   },
   "targets": {},
