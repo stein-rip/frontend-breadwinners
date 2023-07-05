@@ -4,37 +4,18 @@ import AuthContext from "../context/AuthContext";
 import SignIn from "../assets/SignIn.png";
 import SignOut from "../assets/SignOut.png";
 import "./Footer.css";
-import { signInWithGoogle, signOut } from "../firebaseConfig";
 
 const Footer = () => {
 	const { user, profile } = useContext(AuthContext);
 	return (
 		<div className="Footer">
-			<div className="Breadwinners">
-				{user ? (
-					<Link to="/">
-						<img
-							className="SignImg"
-							src={SignOut}
-							alt="Toast"
-							onClick={signOut}
-						/>
-					</Link>
-				) : (
-					<img
-						className="SignImg"
-						src={SignIn}
-						alt="Toast Sign in"
-						onClick={signInWithGoogle}
-					/>
-				)}
-			</div>
 			{profile && (
 				<nav className="Nav">
 					<ul>
 						<CustomLink property="saved" to="/jobs/favorites">
 							saved
 						</CustomLink>
+
 						<CustomLink property="profile" to="/settings/profile">
 							home
 						</CustomLink>

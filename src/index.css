@@ -21,7 +21,7 @@ body {
 	color: rgb(117, 67, 32);
 }
 
-button,
+/* button,
 select,
 input {
 	border: 3px solid yellowgreen;
@@ -30,4 +30,4 @@ input {
 	color: rgb(117, 67, 32);
 	border-radius: 2vw;
 	font-size: larger;
-}
+} */

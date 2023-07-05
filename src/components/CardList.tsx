@@ -6,7 +6,7 @@ import TinderCard from "react-tinder-card";
 import "./CardList.css";
 import Favorite from "../models/Favorite";
 import Greetings from "./Greetings";
-import BreadwinnersToast from "../assets/ToastFace.png";
+import ToastFace from "../assets/ToastFace.png";
 interface Props {
 	jobArrayProp: Job[];
 }
@@ -31,6 +31,14 @@ const CardList = ({ jobArrayProp }: Props) => {
 
 	return (
 		<div className="CardList">
+			<div className="Greetings">
+				<img
+					className="Breadwinners Mascot BreadBase"
+					src={ToastFace}
+					alt="Breadwinners Mascot"
+				/>
+				);
+			</div>
 			<ul>
 				<div className="cardContainer">
 					{!trigger && <Greetings />}

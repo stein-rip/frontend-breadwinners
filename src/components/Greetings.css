@@ -3,7 +3,7 @@
 	width: 100vw;
 }
 .Greetings {
-	background-image: url("../assets/ToastMascot.png");
+	background-image: url("../assets/ToastFace.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	position: absolute;

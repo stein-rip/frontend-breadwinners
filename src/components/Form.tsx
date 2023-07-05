@@ -129,7 +129,7 @@ const Form = () => {
 					</div>
 					<div className="remote-container">
 						<p>
-							Swipe results left to discard, or right to save. You got this,{" "}
+							Swipe results left to discard, or right to save. You got this,
 							{user?.displayName}!
 						</p>
 						<button>Get that bread!</button>

@@ -26,13 +26,8 @@ const Details = () => {
 				<img className="ToastDetailsImg" src={ToastDetails} alt="Toast" />
 				<div className="ToastDetails BreadBase">
 					<h2> {jobs?.job_title} </h2>
-					{/* <p>{jobs?.employer_website}</p>  */}
-					<h2>{jobs?.employer_name}</h2>
-					{/* <h3>{jobs?.employer_company_type}</h3> */}
-					<h3>{jobs?.job_is_remote}</h3>
 					<h3>{jobs?.job_employment_type}</h3>
 					<h3>
-						{" "}
 						{jobs?.job_city} {jobs?.job_state}
 					</h3>
 					<h3>Job Description:</h3>

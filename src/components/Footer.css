@@ -1,9 +1,5 @@
-.Footer {
-	position: relative;
-	margin-top: 110%;
-}
-
 .Footer .Nav ul {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;

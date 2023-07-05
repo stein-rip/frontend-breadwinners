@@ -43,7 +43,7 @@ const Card = ({ jobProp, fromFav }: Props) => {
 					{/* <h3>
 					{jobProp?.job_city} {jobProp?.job_state}
 				</h3> */}
-					<p>{jobProp?.job_description.slice(0, 200)} ...</p>
+					<p>{jobProp?.job_description.slice(0, 270)} ...</p>
 					{/* {profile &&
 						(isFav(jobProp?.job_id) ? (
 							<button onClick={() => deleteFavoriteHandler(jobProp?.job_id)}>

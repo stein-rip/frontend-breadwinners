@@ -21,9 +21,9 @@
 	color: saddlebrown;
 }
 .FavoriteCard h1,
-h2,
-h3,
-p {
+.FavoriteCard h2,
+.FavoriteCard h3,
+.FavoriteCard p {
 	font-size: 3vw;
 	display: flex;
 	flex-direction: column;
