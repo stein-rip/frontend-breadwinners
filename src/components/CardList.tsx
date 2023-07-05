@@ -6,7 +6,7 @@ import TinderCard from "react-tinder-card";
 import "./CardList.css";
 import Favorite from "../models/Favorite";
 import Greetings from "./Greetings";
-import ToastFace from "../assets/ToastFace.png";
+import ClickSaved from "../assets/ClickSaved.png";
 interface Props {
 	jobArrayProp: Job[];
 }
@@ -34,7 +34,7 @@ const CardList = ({ jobArrayProp }: Props) => {
 			<div className="Greetings">
 				<img
 					className="Breadwinners Mascot BreadBase"
-					src={ToastFace}
+					src={ClickSaved}
 					alt="Breadwinners Mascot"
 				/>
 				);

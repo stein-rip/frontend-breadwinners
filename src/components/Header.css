@@ -18,5 +18,10 @@
 }
 
 .Header img {
-	height: 8vh;
+	height: 10vh;
+}
+
+.Header p {
+	font-size: x-small;
+	text-align: center;
 }

@@ -5,9 +5,6 @@ import AuthContext from "../context/AuthContext";
 import { useContext } from "react";
 import ToastMascot from "../assets/ToastMascot.png";
 
-import SignIn from "../assets/SignIn.png";
-import SignOut from "../assets/SignOut.png";
-
 const Header = () => {
 	const { user, profile } = useContext(AuthContext);
 
@@ -23,7 +20,7 @@ const Header = () => {
 					<Link to="/">
 						<img
 							className="SignImg"
-							src={SignOut}
+							src={ToastMascot}
 							alt="Toast"
 							onClick={signOut}
 						/>
@@ -31,11 +28,12 @@ const Header = () => {
 				) : (
 					<img
 						className="SignImg"
-						src={SignIn}
+						src={ToastMascot}
 						alt="Toast Sign in"
 						onClick={signInWithGoogle}
 					/>
 				)}
+				<p>Sign In/Out</p>
 			</div>
 		</header>
 	);

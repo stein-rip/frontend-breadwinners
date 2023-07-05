@@ -4,39 +4,16 @@
 	flex-direction: row;
 	justify-content: space-around;
 	list-style: none;
+	height: 100%;
 }
 
 .Footer ul a {
 	font-family: Concert One;
 	font-size: 2vh;
 	text-decoration: none;
-}
-
-.Footer .saved a {
-	border: 3px solid rgb(59, 58, 58);
-	color: rgb(59, 58, 58);
 	border-radius: 12px;
 	padding: 5px;
-}
-.Footer .profile a {
 	border: 3px solid rgb(59, 58, 58);
-	color: rgb(59, 58, 58);
-	border-radius: 12px;
-	padding: 5px;
-}
-
-.Footer .Last {
-	font-size: 0.4em;
-	display: flex;
-	justify-content: center;
-	padding-top: 5px;
-	text-align: center;
-}
-
-.Footer img {
-	position: absolute;
-	left: 46.5%;
-	height: 6vh;
 }
 
 /* @media only screen and (min-width: 768px) {

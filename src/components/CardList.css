@@ -1,10 +1,12 @@
-.CardList .Toast {
-	position: relative;
+.CardList .Greetings {
+	position: sticky;
+	visibility: hidden;
 }
 
 .CardList .cardContainer .swipe {
 	position: fixed;
 	visibility: none;
+	margin-top: 30px;
 }
 
 .CardList h1 {
@@ -14,9 +16,8 @@
 
 .CardList ul {
 	list-style: none;
-}
-.CardList .CardTitle {
-	color: white;
+	position: absolute;
+	top: 90px;
 }
 
 /* @media only screen and (min-width: 768px) {
