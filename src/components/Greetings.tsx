@@ -7,11 +7,11 @@ const Greetings = () => {
 	const { user, profile } = useContext(AuthContext);
 	return (
 		<div className="Greetings">
-			<img
+			{/* <img
 				className="Breadwinners Mascot BreadBase"
 				src={ToastFace}
 				alt="Breadwinners Mascot"
-			/>
+			/> */}
 			);
 		</div>
 	);
