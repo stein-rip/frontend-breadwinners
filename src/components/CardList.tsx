@@ -5,7 +5,7 @@ import Card from "./Card";
 import TinderCard from "react-tinder-card";
 import "./CardList.css";
 import Favorite from "../models/Favorite";
-import Greetings from "./Greetings";
+
 import ClickSaved from "../assets/ClickSaved.png";
 interface Props {
 	jobArrayProp: Job[];
@@ -41,7 +41,6 @@ const CardList = ({ jobArrayProp }: Props) => {
 			</div>
 			<ul>
 				<div className="cardContainer">
-					{!trigger && <Greetings />}
 					{jobArrayProp.map((job) => (
 						<TinderCard
 							className="swipe BreadBase"
