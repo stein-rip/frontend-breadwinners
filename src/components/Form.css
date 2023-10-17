@@ -48,9 +48,16 @@
 	justify-content: center;
 }
 
+.Form h1 {
+	padding-bottom: 10px;
+}
+.Form h5 {
+	font-size: 8px;
+}
+
 .Form p {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	padding: 3px;
 }
 

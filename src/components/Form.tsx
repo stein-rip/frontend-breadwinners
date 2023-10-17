@@ -60,6 +60,7 @@ const Form = () => {
 			<div className="Toast FormContainer">
 				<form onSubmit={(e) => handleSubmit(e)}>
 					<div className="Selections">
+						<h1>Hi, {user?.displayName}</h1>
 						<p>Type a job title, location, or both!</p>
 						<div className="search">
 							<label htmlFor="query"></label>
@@ -128,10 +129,7 @@ const Form = () => {
 						</div>
 					</div>
 					<div className="remote-container">
-						<p>
-							Swipe results left to discard, or right to save. You got this,
-							{user?.displayName}!
-						</p>
+						<h4>(Swipe results left to discard, or right to save!)</h4>
 						<button>Get that bread!</button>
 					</div>
 				</form>

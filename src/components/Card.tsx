@@ -7,6 +7,7 @@ import AuthContext from "../context/AuthContext";
 import Job from "../models/Job";
 import BreadwinnersToast from "../assets/ToastFace.png";
 import CountDownTimer from "./CountDownTimer";
+import Footer from "./Footer";
 
 interface Props {
 	jobProp: Job;
@@ -17,7 +18,7 @@ const Card = ({ jobProp, fromFav }: Props) => {
 	const { addFavoriteHandler, deleteFavoriteHandler, isFav } =
 		useContext(FavoritesContext);
 	const { profile, user } = useContext(AuthContext);
-
+	<Footer />;
 	return (
 		<li className="Card">
 			<div className="Toast">

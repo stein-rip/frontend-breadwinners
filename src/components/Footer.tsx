@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { Link, useResolvedPath, useMatch } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
-import SignIn from "../assets/SignIn.png";
-import SignOut from "../assets/SignOut.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -12,12 +10,11 @@ const Footer = () => {
 			{profile && (
 				<nav className="Nav">
 					<ul>
+						<CustomLink property="profile" to="/settings/profile">
+							edit
+						</CustomLink>
 						<CustomLink property="saved" to="/jobs/favorites">
 							saved
-						</CustomLink>
-
-						<CustomLink property="profile" to="/settings/profile">
-							home
 						</CustomLink>
 					</ul>
 					<p className="Last">
